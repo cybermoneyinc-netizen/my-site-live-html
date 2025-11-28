@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Healthy Tips For You</title>
+    <meta name="description" content="Get in touch with Healthy Tips For You. We'd love to hear from you.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS Variables (Design System) -->
+    <style>
+        :root {
+            --background: 0 0% 100%;
+            --foreground: 0 0% 15%;
+            --card: 0 0% 100%;
+            --card-foreground: 0 0% 15%;
+            --primary: 0 84% 60%;
+            --primary-foreground: 0 0% 100%;
+            --secondary: 39 45% 93%;
+            --secondary-foreground: 0 0% 15%;
+            --muted: 0 0% 96%;
+            --muted-foreground: 0 0% 45%;
+            --border: 0 0% 90%;
+        }
+        
+        body {
+            background-color: hsl(var(--background));
+            color: hsl(var(--foreground));
+        }
+    </style>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: 'hsl(var(--background))',
+                        foreground: 'hsl(var(--foreground))',
+                        primary: {
+                            DEFAULT: 'hsl(var(--primary))',
+                            foreground: 'hsl(var(--primary-foreground))'
+                        },
+                        secondary: {
+                            DEFAULT: 'hsl(var(--secondary))',
+                            foreground: 'hsl(var(--secondary-foreground))'
+                        },
+                        muted: {
+                            DEFAULT: 'hsl(var(--muted))',
+                            foreground: 'hsl(var(--muted-foreground))'
+                        },
+                        border: 'hsl(var(--border))'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="border-b sticky top-0 z-50 shadow-sm" style="background-color: white; border-color: hsl(var(--border));">
+        <div class="container mx-auto px-4 py-6 max-w-6xl">
+            <div class="flex items-center justify-between">
+                <a href="home.html" class="flex items-center">
+                    <h1 class="text-2xl md:text-3xl font-bold" style="color: hsl(var(--primary));">
+                        Healthy Tips For You
+                    </h1>
+                </a>
+                <nav class="hidden md:flex gap-6">
+                    <a href="home.html" class="text-sm font-medium hover:text-primary transition-colors">
+                        Home
+                    </a>
+                    <a href="contact.html" class="text-sm font-medium hover:text-primary transition-colors">
+                        Contact
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <main class="container mx-auto px-4 py-12 max-w-4xl">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
+            <p class="text-lg max-w-2xl mx-auto" style="color: hsl(var(--muted-foreground));">
+                Have a question or feedback? We'd love to hear from you. Fill out the form below and we'll get back to you as soon as possible.
+            </p>
+        </div>
+
+        <div class="rounded-lg p-8 md:p-12 shadow-sm" style="background-color: white; border: 1px solid hsl(var(--border));">
+            <form id="contactForm" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium mb-2">
+                            Name *
+                        </label>
+                        <input
+                            id="name"
+                            name="name"
+                            type="text"
+                            required
+                            placeholder="Your name"
+                            class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2"
+                            style="border-color: hsl(var(--border)); background-color: hsl(var(--background));"
+                        />
+                    </div>
+
+                    <div>
+                        <label for="email" class="block text-sm font-medium mb-2">
+                            Email *
+                        </label>
+                        <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            required
+                            placeholder="your.email@example.com"
+                            class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2"
+                            style="border-color: hsl(var(--border)); background-color: hsl(var(--background));"
+                        />
+                    </div>
+                </div>
+
+                <div>
+                    <label for="subject" class="block text-sm font-medium mb-2">
+                        Subject *
+                    </label>
+                    <input
+                        id="subject"
+                        name="subject"
+                        type="text"
+                        required
+                        placeholder="What is this regarding?"
+                        class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2"
+                        style="border-color: hsl(var(--border)); background-color: hsl(var(--background));"
+                    />
+                </div>
+
+                <div>
+                    <label for="message" class="block text-sm font-medium mb-2">
+                        Message *
+                    </label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        required
+                        placeholder="Tell us more about your inquiry..."
+                        class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 min-h-[200px]"
+                        style="border-color: hsl(var(--border)); background-color: hsl(var(--background));"
+                    ></textarea>
+                </div>
+
+                <button 
+                    type="submit"
+                    class="px-12 py-3 rounded-md font-medium text-white hover:opacity-90 transition-opacity"
+                    style="background-color: hsl(var(--primary));"
+                >
+                    Send Message
+                </button>
+            </form>
+        </div>
+
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="text-center p-6 rounded-lg" style="background-color: hsl(var(--muted) / 0.5);">
+                <div class="text-3xl mb-3">📧</div>
+                <h3 class="font-semibold mb-2">Email</h3>
+                <p class="text-sm" style="color: hsl(var(--muted-foreground));">info@healthy-tips-for-you.com</p>
+            </div>
+
+            <div class="text-center p-6 rounded-lg" style="background-color: hsl(var(--muted) / 0.5);">
+                <div class="text-3xl mb-3">⏰</div>
+                <h3 class="font-semibold mb-2">Response Time</h3>
+                <p class="text-sm" style="color: hsl(var(--muted-foreground));">Within 24-48 hours</p>
+            </div>
+
+            <div class="text-center p-6 rounded-lg" style="background-color: hsl(var(--muted) / 0.5);">
+                <div class="text-3xl mb-3">🌍</div>
+                <h3 class="font-semibold mb-2">Location</h3>
+                <p class="text-sm" style="color: hsl(var(--muted-foreground));">Serving globally</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t py-8 mt-12" style="border-color: hsl(var(--border));">
+        <div class="container max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="font-semibold mb-4">Healthy Tips For You</h3>
+                    <p class="text-sm" style="color: hsl(var(--muted-foreground));">
+                        Your trusted source for natural health tips and wellness advice.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="home.html" class="text-sm hover:underline" style="color: hsl(var(--muted-foreground));">Home</a></li>
+                        <li><a href="contact.html" class="text-sm hover:underline" style="color: hsl(var(--muted-foreground));">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="terms.html" class="text-sm hover:underline" style="color: hsl(var(--muted-foreground));">Terms & Conditions</a></li>
+                        <li><a href="privacy.html" class="text-sm hover:underline" style="color: hsl(var(--muted-foreground));">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t pt-8 text-center text-sm" style="border-color: hsl(var(--border)); color: hsl(var(--muted-foreground));">
+                <p>&copy; 2025 Healthy Tips For You. All rights reserved.</p>
+                <p class="mt-2">
+                    <strong>Disclaimer:</strong> The information on this website is for educational purposes only. 
+                    Always consult with a healthcare professional before starting any health program.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Form Submission Handler -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show success message
+            alert('Message Sent! Thank you for contacting us. We\'ll get back to you soon.');
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
+</body>
+</html>

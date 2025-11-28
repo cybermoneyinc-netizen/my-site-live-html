@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berliner Ärzte enthüllen: Bekämpfen Sie Bauchfett mit diesem simplen „Ingwer-Trick"</title>
+    <meta name="description" content="Entdecken Sie die sogenannte 'bequeme Methode', um Bauchfett zu verlieren – Details dazu finden Sie in diesem viralen Video.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        :root {
+            --background: 0 0% 100%;
+            --foreground: 0 0% 15%;
+            --card: 0 0% 100%;
+            --card-foreground: 0 0% 15%;
+            --popover: 0 0% 100%;
+            --popover-foreground: 0 0% 15%;
+            --primary: 0 84% 60%;
+            --primary-foreground: 0 0% 100%;
+            --secondary: 39 45% 93%;
+            --secondary-foreground: 0 0% 15%;
+            --muted: 0 0% 96%;
+            --muted-foreground: 0 0% 45%;
+            --accent: 39 45% 93%;
+            --accent-foreground: 0 0% 15%;
+            --destructive: 0 84.2% 60.2%;
+            --destructive-foreground: 0 0% 98%;
+            --border: 0 0% 90%;
+            --input: 0 0% 90%;
+            --ring: 340 82% 52%;
+            --radius: 0.25rem;
+            --facebook: 221 44% 41%;
+            --twitter: 0 0% 0%;
+            --pinterest: 0 78% 56%;
+            --news-primary: 210 17% 23%;
+            --news-primary-foreground: 0 0% 100%;
+            --news-accent: 210 20% 40%;
+            --news-border: 210 10% 90%;
+            --news-muted: 210 10% 96%;
+        }
+        
+        body {
+            background-color: hsl(var(--background));
+            color: hsl(var(--foreground));
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        
+        .font-serif {
+            font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+        }
+        
+        .cta-button {
+            display: block;
+            width: 100%;
+            background-color: hsl(222, 47%, 11%);
+            color: white;
+            font-weight: 600;
+            font-size: 1.125rem;
+            padding: 1.5rem 2rem;
+            border-radius: 0.375rem;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: hsl(217, 91%, 60%);
+        }
+        
+        .cta-button-inline {
+            display: inline-block;
+            background-color: hsl(222, 47%, 11%);
+            color: white;
+            font-weight: 600;
+            font-size: 1.125rem;
+            padding: 1.5rem 3rem;
+            border-radius: 0.375rem;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button-inline:hover {
+            background-color: hsl(217, 91%, 60%);
+        }
+        
+        .social-btn {
+            flex: 1;
+            color: white;
+            font-size: 0.75rem;
+            padding: 0.5rem 0.75rem;
+            border-radius: 0.25rem;
+            transition: opacity 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.375rem;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .social-btn:hover {
+            opacity: 0.9;
+        }
+        
+        @media (min-width: 768px) {
+            .social-btn {
+                font-size: 0.875rem;
+                padding: 0.625rem 1rem;
+                gap: 0.5rem;
+            }
+        }
+        
+        .social-icon {
+            width: 0.875rem;
+            height: 0.875rem;
+        }
+        
+        @media (min-width: 768px) {
+            .social-icon {
+                width: 1rem;
+                height: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen">
+        <!-- Advertorial Label -->
+        <div style="border-bottom: 1px solid hsl(var(--news-border)); padding: 0.5rem 0; text-align: center; background-color: hsl(var(--news-muted));">
+            <span style="font-size: 0.75rem; color: hsl(var(--muted-foreground)); font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;">Anzeige</span>
+        </div>
+
+        <!-- Header -->
+        <header style="border-bottom: 1px solid hsl(var(--news-border)); padding: 1rem 0; background-color: white;">
+            <div class="container max-w-5xl mx-auto px-4" style="max-width: 64rem;">
+                <div style="display: flex; justify-content: center;">
+                    <h1 class="font-serif" style="font-size: 1.5rem; font-weight: bold; color: hsl(var(--news-primary)); letter-spacing: -0.025em;">
+                        GESUNDHEIT AKTUELL
+                    </h1>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="container mx-auto px-4" style="max-width: 56rem; padding-top: 2rem; padding-bottom: 2rem;">
+            <!-- Article Metadata -->
+            <div style="margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid hsl(var(--news-border));">
+                <p style="font-size: 0.875rem; color: hsl(var(--news-accent)); font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem;">
+                    Gesundheit & Wellness
+                </p>
+                <p style="font-size: 0.875rem; color: hsl(var(--muted-foreground));" id="publish-date"></p>
+            </div>
+
+            <!-- Headline -->
+            <h1 class="font-serif" style="font-size: 2.25rem; font-weight: bold; color: hsl(var(--news-primary)); line-height: 1.2; margin-bottom: 1.5rem;">
+                Berliner Ärzte enthüllen: Bekämpfen Sie Bauchfett mit diesem simplen „Ingwer-Trick"
+            </h1>
+            
+            <!-- Subheadline -->
+            <p class="font-serif" style="font-size: 1.25rem; color: hsl(var(--news-accent)); line-height: 1.6; margin-bottom: 2rem; font-style: italic;">
+                Entdecken Sie die sogenannte „bequeme Methode", um Bauchfett zu verlieren – Details dazu finden Sie in diesem viralen Video.
+            </p>
+
+            <!-- Social Share Buttons -->
+            <div style="display: flex; gap: 0.5rem; margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid hsl(var(--news-border));">
+                <button onclick="shareFacebook()" class="social-btn" style="background-color: hsl(var(--facebook));">
+                    <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                    <span class="hidden sm:inline">Teilen</span>
+                </button>
+                <button onclick="shareTwitter()" class="social-btn" style="background-color: hsl(var(--twitter));">
+                    <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                    </svg>
+                    <span class="hidden sm:inline">Tweet</span>
+                </button>
+                <button onclick="sharePinterest()" class="social-btn" style="background-color: hsl(var(--pinterest));">
+                    <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/>
+                    </svg>
+                    <span class="hidden sm:inline">Pin</span>
+                </button>
+            </div>
+
+            <!-- Hero Image -->
+            <div style="margin-bottom: 2.5rem;">
+                <a href="https://globalvisitlog.com/cf/click/1" target="_blank" rel="noopener noreferrer" style="display: block;">
+                    <img alt="Frau mit Ingwer-Getränk" style="width: 100%; border-radius: 0.375rem;" src="/lovable-uploads/50e630f4-9c45-4a29-94ed-2e4159eee290.jpg">
+                </a>
+                <p style="font-size: 0.875rem; color: hsl(var(--muted-foreground)); margin-top: 0.75rem; text-align: center; font-style: italic;">
+                    Symbolbild: Natürliche Gewichtsreduktion durch Ingwer-basierte Methoden
+                </p>
+            </div>
+
+            <!-- CTA Button under image -->
+            <div style="margin-bottom: 3rem;">
+                <a href="https://globalvisitlog.com/cf/click/1" target="_blank" rel="noopener noreferrer" class="cta-button">
+                    Video jetzt ansehen →
+                </a>
+            </div>
+
+            <!-- Article Content -->
+            <div style="max-width: 100%;">
+                <p style="color: hsl(var(--foreground)); line-height: 1.6; margin-bottom: 1.5rem; font-size: 1.125rem;">
+                    Wir wurden immer glauben gemacht, dass wir zum Abnehmen ruhig bleiben und Sport treiben müssen…
+                </p>
+
+                <p style="color: hsl(var(--foreground)); line-height: 1.6; margin-bottom: 1.5rem; font-size: 1.125rem;">
+                    Nun sagt eine renommierte Ärztin, dass das nicht ganz stimmt…
+                </p>
+
+                <p style="color: hsl(var(--foreground)); line-height: 1.6; margin-bottom: 1.5rem; font-size: 1.125rem;">
+                    Laut <strong style="font-weight: 600;">Dr. Müller</strong>, einer der angesehensten deutschen Spezialistinnen für gesundes Abnehmen, funktionieren die meisten Diäten und Trainingsprogramme nicht, weil sie die eigentliche Ursache, den wahren Grund für die Gewichtszunahme, nicht angehen.
+                </p>
+
+                <p style="color: hsl(var(--foreground)); line-height: 1.6; margin-bottom: 1.5rem; font-size: 1.125rem;">
+                    Kürzlich veröffentlichte die Ärztin eine ungewöhnliche Herausforderung in den sozialen Medien: Sie forderte ihre Follower auf, alle Diäten zu beenden und ein Glas ihres neuen <strong style="font-weight: 600;">Ingwergetränks mit nur drei Zutaten</strong> zu trinken…
+                </p>
+
+                <p style="color: hsl(var(--foreground)); line-height: 1.6; margin-bottom: 1.5rem; font-size: 1.125rem;">
+                    <strong style="font-weight: 600;">Warum?</strong>
+                </p>
+
+                <p style="color: hsl(var(--foreground)); line-height: 1.6; margin-bottom: 1.5rem; font-size: 1.125rem;">
+                    Dr. Müller, eine der angesehensten deutschen Spezialistinnen für gesundes Abnehmen, erklärt, dass die meisten Diäten und Trainingsprogramme nicht funktionieren, weil sie die eigentliche Ursache, den wahren Grund für die Gewichtszunahme, nicht angehen. Es ist ganz einfach: Dieser Trick kann die Wirkung von synthetischem <strong style="font-weight: 600;">Mounjaro</strong> auf <strong style="font-weight: 600;">natürliche Weise nachahmen</strong>, indem er den Insulinspiegel im Körper reguliert und die Konzentration zweier für die Gewichtsabnahme wichtiger Hormone erhöht: <strong style="font-weight: 600;">GLP-1 und GIP</strong>.
+                </p>
+
+                <p style="color: hsl(var(--foreground)); line-height: 1.6; margin-bottom: 1.5rem; font-size: 1.125rem;">
+                    Dieser selbstgemachte „Abnehmtrick" könnte <strong style="font-weight: 600;">Tausende von Euro wert sein</strong>, wenn er von der Abnehmindustrie vermarktet würde.
+                </p>
+
+                <p style="color: hsl(var(--foreground)); line-height: 1.6; margin-bottom: 1.5rem; font-size: 1.125rem;">
+                    „Dieses Ritual mit nur drei Zutaten auf Ingwerbasis wirkt fast wie eine <strong style="font-weight: 600;">sofortige Magenverkleinerung</strong>. Sie werden staunen, wie einfach das Abnehmen danach ist", sagte Dr. Fischer in einem Fernsehinterview.
+                </p>
+
+                <p style="color: hsl(var(--foreground)); line-height: 1.6; margin-bottom: 1.5rem; font-size: 1.125rem;">
+                    Die Patienten der Ärztin nannten diese neue Technik <strong style="font-weight: 600;">„selbstgemachtes Mounjaro"</strong>, weil diese Ingwermischung aus drei Zutaten den Körper in nur <strong style="font-weight: 600;">45 Sekunden</strong> dabei unterstützen kann, Fett zu verbrennen – <strong style="font-weight: 600;">rund um die Uhr</strong>.
+                </p>
+
+                <p style="color: hsl(var(--foreground)); line-height: 1.6; margin-bottom: 1.5rem; font-size: 1.125rem;">
+                    Nach ihren Instagram-Stories veröffentlichte Dr. Müller ein ausführliches Video mit einer <strong style="font-weight: 600;">Schritt-für-Schritt-Anleitung</strong> – <strong style="font-weight: 600;">kostenlos und werbefrei</strong> –, in dem sie genau beschreibt, wie man diese selbstgemachte Lösung zubereitet.
+                </p>
+
+                <p style="color: hsl(var(--foreground)); line-height: 1.6; margin-bottom: 1.5rem; font-size: 1.125rem;">
+                    „Wenn mein selbstgemachter Trick auch nur einer Person hilft, <strong style="font-weight: 600;">Gewicht zu verlieren und neue Energie zu tanken</strong>, wäre ich geehrt, einen Beitrag geleistet zu haben", kommentierte Dr. Müller.
+                </p>
+
+                <p style="color: hsl(var(--foreground)); line-height: 1.6; margin-bottom: 1.5rem; font-size: 1.125rem;">
+                    Das Video verbreitete sich daraufhin <strong style="font-weight: 600;">rasant</strong> in den sozialen Medien.
+                </p>
+
+                <p style="color: hsl(var(--foreground)); line-height: 1.6; margin-bottom: 1.5rem; font-size: 1.125rem;">
+                    Es wurde zuerst von Nutzern auf Facebook, dann auf YouTube geteilt und hat bereits <strong style="font-weight: 600;">Millionen von Aufrufen</strong> erzielt.
+                </p>
+
+                <p style="color: hsl(var(--foreground)); line-height: 1.6; margin-bottom: 1.5rem; font-size: 1.125rem;">
+                    Und die Zahl <strong style="font-weight: 600;">steigt stetig</strong>.
+                </p>
+
+                <p style="color: hsl(var(--foreground)); line-height: 1.6; margin-bottom: 1.5rem; font-size: 1.125rem;">
+                    Bisher sind die Kommentare und das Feedback <strong style="font-weight: 600;">hervorragend</strong>. Tausende berichten, dass sie <strong style="font-weight: 600;">schnell und ohne Beschwerden abnehmen</strong>.
+                </p>
+
+                <p style="color: hsl(var(--foreground)); line-height: 1.6; margin-bottom: 2.5rem; font-size: 1.125rem;">
+                    Ein Zuschauer kommentierte: „<strong style="font-weight: 600;">Das beste Ergebnis, das ich je erzielt habe!</strong> So etwas habe ich noch nie erlebt. Ich konnte es kaum glauben, als ich in den Spiegel schaute. Ich werde es auf jeden Fall weiter anwenden. Ich verstehe zwar nicht ganz, wie es funktioniert, aber <strong style="font-weight: 600;">die Ergebnisse sind fantastisch</strong>. Vielen Dank!"
+                </p>
+
+                <!-- Video CTA Box -->
+                <div style="background-color: hsl(var(--news-muted)); border: 1px solid hsl(var(--news-border)); padding: 3rem; border-radius: 0.25rem; margin: 4rem 0;">
+                    <h3 class="font-serif" style="font-size: 1.875rem; font-weight: bold; margin-bottom: 1.5rem; text-align: center; color: hsl(var(--news-primary));">
+                        Vollständiges Video ansehen
+                    </h3>
+                    
+                    <div style="text-align: center;">
+                        <a href="https://globalvisitlog.com/cf/click/1" target="_blank" rel="noopener noreferrer" class="cta-button-inline">
+                            Zum Video →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Testimonials Section -->
+                <div style="margin: 4rem 0; padding-top: 3rem; border-top: 1px solid hsl(var(--news-border));">
+                    <h2 class="font-serif" style="font-size: 2rem; font-weight: bold; color: hsl(var(--news-primary)); margin-bottom: 2rem;">
+                        Erfahrungsberichte
+                    </h2>
+                    
+                    <p style="color: hsl(var(--foreground)); line-height: 1.6; margin-bottom: 2rem; font-size: 1.125rem;">
+                        Das ist Cheri. Sie hat mit dieser Methode beeindruckende drei Kleidergrößen verloren.
+                    </p>
+                    
+                    <!-- Testimonial 1 - Cheri -->
+                    <div style="margin-bottom: 4rem;">
+                        <div style="margin-bottom: 1rem;">
+                            <a href="https://globalvisitlog.com/cf/click/1" target="_blank" rel="noopener noreferrer">
+                                <img alt="Cheri Nachher" style="width: 100%; border-radius: 0.375rem;" src="/lovable-uploads/66ab5a43-d2d7-4122-90a4-db932d839b96.png">
+                            </a>
+                        </div>
+                        <p style="text-align: center; font-size: 0.875rem; color: hsl(var(--muted-foreground)); margin-bottom: 1.5rem; font-style: italic;">Ergebnisse können variieren</p>
+                        
+                        <div style="background-color: hsl(var(--news-muted)); padding: 2rem; border-radius: 0.25rem; border-left: 4px solid hsl(var(--news-primary));">
+                            <p style="color: hsl(var(--foreground)); line-height: 1.6; font-size: 1.125rem; font-style: italic; margin-bottom: 1rem;">
+                                „Ich habe das Video gesehen und dachte mir: ‚Warum eigentlich nicht?' Ich kämpfe mit meinem Gewicht, seit ich ein Teenager war. Aber das hier hat bei mir super funktioniert."
+                            </p>
+                            <p style="color: hsl(var(--foreground)); font-weight: 600; font-size: 1rem;">— Cheri H., 29</p>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 - Rose -->
+                    <div style="margin-bottom: 4rem;">
+                        <p style="color: hsl(var(--foreground)); line-height: 1.6; margin-bottom: 2rem; font-size: 1.125rem;">
+                            Aber es geht nicht nur um die perfekte „Bikinifigur". Schauen Sie sich Rose (58) an. Sie verlor endlich die hartnäckigen 11 Kilo an Bauch, Hüften und Oberschenkeln – in nur wenigen Wochen.
+                        </p>
+                        
+                        <div style="margin-bottom: 1rem;">
+                            <a href="https://globalvisitlog.com/cf/click/1" target="_blank" rel="noopener noreferrer">
+                                <img alt="Rose Vorher" style="width: 100%; border-radius: 0.375rem;" src="/lovable-uploads/0db9c20c-3b8b-457c-8099-2705e207124c.png">
+                            </a>
+                        </div>
+                        <p style="text-align: center; font-size: 0.875rem; color: hsl(var(--muted-foreground)); margin-bottom: 1.5rem; font-style: italic;">Ergebnisse können variieren</p>
+                        
+                        <div style="background-color: hsl(var(--news-muted)); padding: 2rem; border-radius: 0.25rem; border-left: 4px solid hsl(var(--news-primary));">
+                            <p style="color: hsl(var(--foreground)); line-height: 1.6; font-size: 1.125rem; font-style: italic; margin-bottom: 1rem;">
+                                „Letztes Jahr habe ich etwas abgenommen, weil ich keinen Alkohol mehr trank. Aber die letzten 9 Kilo an Bauch und Hüfte wollten einfach nicht verschwinden, egal was ich tat. Salate, tägliche Spaziergänge – nichts half. Aber dieses Video hat alles verändert, und es dauerte nur ein paar Wochen."
+                            </p>
+                            <p style="color: hsl(var(--foreground)); font-weight: 600; font-size: 1rem;">— Rose Martin</p>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 - Cole -->
+                    <div style="margin-bottom: 4rem;">
+                        <p style="color: hsl(var(--foreground)); line-height: 1.6; margin-bottom: 2rem; font-size: 1.125rem;">
+                            Und es sind nicht nur Frauen, die Ergebnisse sehen. Das ist Cole nach nur drei Wochen.
+                        </p>
+                        
+                        <div style="margin-bottom: 1rem;">
+                            <a href="https://globalvisitlog.com/cf/click/1" target="_blank" rel="noopener noreferrer">
+                                <img alt="Cole Vorher" style="width: 100%; border-radius: 0.375rem;" src="/lovable-uploads/38919f23-f3c4-4ae7-9953-ceb2b2208cee.png">
+                            </a>
+                        </div>
+                        <p style="text-align: center; font-size: 0.875rem; color: hsl(var(--muted-foreground)); margin-bottom: 1.5rem; font-style: italic;">Ergebnisse können variieren</p>
+                        
+                        <div style="background-color: hsl(var(--news-muted)); padding: 2rem; border-radius: 0.25rem; border-left: 4px solid hsl(var(--news-primary));">
+                            <p style="color: hsl(var(--foreground)); line-height: 1.6; font-size: 1.125rem; font-style: italic; margin-bottom: 1rem;">
+                                „Ich gebe es zu – ich bin faul. Fitnessstudios sind nichts für mich, und ich liebe Pizza. Ich hielt mich nicht für ‚fett', aber ich war definitiv ‚weich'. Das ist jetzt vorbei, dank des Videos, das ich gesehen habe. Es ist echt cool, und es funktioniert wirklich!"
+                            </p>
+                            <p style="color: hsl(var(--foreground)); font-weight: 600; font-size: 1rem;">— Cole P., 27</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Final CTA Section -->
+                <div style="margin: 4rem 0; padding-top: 3rem; border-top: 1px solid hsl(var(--news-border));">
+                    <div style="margin-bottom: 2rem;">
+                        <a href="https://globalvisitlog.com/cf/click/1" target="_blank" rel="noopener noreferrer">
+                            <img alt="Frau mit Ingwer-Getränk" style="width: 100%; border-radius: 0.375rem;" src="/lovable-uploads/e7822f33-29ad-4bef-aa75-31ba85f47d57.jpg">
+                        </a>
+                    </div>
+
+                    <div style="margin-bottom: 3rem;">
+                        <a href="https://globalvisitlog.com/cf/click/1" target="_blank" rel="noopener noreferrer" class="cta-button">
+                            Jetzt Video ansehen und mehr erfahren →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Comments Section -->
+                <div style="margin: 4rem 0; padding-top: 3rem; border-top: 2px solid hsl(var(--news-border));">
+                    <h3 class="font-serif" style="font-size: 1.5rem; font-weight: bold; color: hsl(var(--news-primary)); margin-bottom: 2.5rem;">
+                        Leserkommentare
+                    </h3>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 2rem;">
+                        <!-- Comment 1 -->
+                        <div style="border-bottom: 1px solid hsl(var(--news-border)); padding-bottom: 1.5rem;">
+                            <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                                <img src="/images/avatar-1.jpg" alt="Sabine K." style="width: 3rem; height: 3rem; border-radius: 9999px; object-fit: cover; flex-shrink: 0;">
+                                <div style="flex: 1;">
+                                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+                                        <span style="font-weight: 600; color: hsl(var(--news-primary));">Sabine K.</span>
+                                        <span style="color: hsl(var(--muted-foreground)); font-size: 0.875rem;">vor 2 Std</span>
+                                    </div>
+                                    <p style="color: hsl(var(--foreground)); line-height: 1.6; font-size: 1rem;">
+                                        „Zuerst dachte ich, es sei ein Scherz. Aber ich habe schon 4 Kilo abgenommen. Der ‚bequeme Weg' ist mein Weg! Haha."
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Comment 2 -->
+                        <div style="border-bottom: 1px solid hsl(var(--news-border)); padding-bottom: 1.5rem;">
+                            <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                                <img src="/images/avatar-2.jpg" alt="Michael G." style="width: 3rem; height: 3rem; border-radius: 9999px; object-fit: cover; flex-shrink: 0;">
+                                <div style="flex: 1;">
+                                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+                                        <span style="font-weight: 600; color: hsl(var(--news-primary));">Michael G.</span>
+                                        <span style="color: hsl(var(--muted-foreground)); font-size: 0.875rem;">vor 5 Std</span>
+                                    </div>
+                                    <p style="color: hsl(var(--foreground)); line-height: 1.6; font-size: 1rem;">
+                                        „Meine Frau hat mich gezwungen, das Video zu sehen. Wir machen es jetzt beide. Mein Bierbauch ist fast weg. Dr. Julia ist genial."
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Comment 3 -->
+                        <div style="border-bottom: 1px solid hsl(var(--news-border)); padding-bottom: 1.5rem;">
+                            <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                                <img src="/images/avatar-3.jpg" alt="Anja L." style="width: 3rem; height: 3rem; border-radius: 9999px; object-fit: cover; flex-shrink: 0;">
+                                <div style="flex: 1;">
+                                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+                                        <span style="font-weight: 600; color: hsl(var(--news-primary));">Anja L.</span>
+                                        <span style="color: hsl(var(--muted-foreground)); font-size: 0.875rem;">vor 12 Std</span>
+                                    </div>
+                                    <p style="color: hsl(var(--foreground)); line-height: 1.6; font-size: 1rem;">
+                                        „Endlich sagt mal jemand die Wahrheit über GLP-1. Danke für den Tipp!"
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer style="border-top: 2px solid hsl(var(--news-border)); padding: 3rem 0; margin-top: 4rem; background-color: hsl(var(--news-muted));">
+            <div class="container mx-auto px-4" style="max-width: 56rem;">
+                <div style="font-size: 0.875rem; color: hsl(var(--muted-foreground)); text-align: center; margin-bottom: 2rem;">
+                    <div style="padding-bottom: 1.5rem; border-bottom: 1px solid hsl(var(--news-border));">
+                        <p style="font-weight: 600; margin-bottom: 0.75rem;">Impressum:</p>
+                        <p>Vital-Roots LLC</p>
+                        <p>19655 East 35th Drive, Suite #100</p>
+                        <p>Aurora, CO, 80011</p>
+                        <p>United States</p>
+                        <p style="margin-top: 0.5rem;">VAT ID: IE4091876UH</p>
+                        <p>Represented by: Vital Roots</p>
+                        <p>E-mail: contact@vital-roots.site</p>
+                        <p>Phone: +1 (814) 831-9770</p>
+                        
+                        <p style="margin-top: 1rem; font-weight: 600;">Haftungsausschluss:</p>
+                        <p style="margin-top: 0.5rem;">Die Gewichtsabnahme wird im Rahmen einer gesunden, kalorienreduzierten Ernährung und eines entsprechenden Bewegungsprogramms erreicht.</p>
+                        
+                        <p style="margin-top: 1rem; font-weight: 600;">Inhaltsstoffe & Zusammensetzung</p>
+                        <p style="margin-top: 0.5rem;">Dieses Produkt enthält eine Auswahl natürlicher Inhaltsstoffe: Ingwerwurzel, Grüntee-Extrakt, Berberin, Apfelessig, Koreanischer Ginseng, Zimtrinde, Bananenblatt und Resveratrol.</p>
+                        
+                        <p style="margin-top: 1rem; font-weight: 600;">Rechtlicher Hinweis & Haftungsausschluss</p>
+                        <p style="margin-top: 0.5rem;">Die auf dieser Webseite dargestellten Inhalte dienen ausschließlich zu Informationszwecken. Die hier genannten Inhaltsstoffe und Produkte sind nicht dazu bestimmt, Krankheiten zu diagnostizieren, zu behandeln, zu heilen oder ihnen vorzubeugen. Nahrungsergänzungsmittel sind kein Ersatz für eine ausgewogene, abwechslungsreiche Ernährung und eine gesunde Lebensweise.</p>
+                        
+                        <p style="margin-top: 0.5rem;">Die Ergebnisse können von Person zu Person variieren. Konsultieren Sie vor der Einnahme Ihren Arzt, insbesondere wenn Sie schwanger sind, stillen, Medikamente einnehmen oder unter einer Vorerkrankung leiden. Abgabe nur an Personen über 18 Jahren.</p>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <div style="display: flex; flex-direction: column; justify-content: center; gap: 1rem; margin-bottom: 1.5rem;">
+                        <a href="/terms" style="font-size: 0.875rem; color: hsl(var(--news-accent)); font-weight: 500; text-decoration: none;">
+                            Nutzungsbedingungen
+                        </a>
+                        <a href="/privacy" style="font-size: 0.875rem; color: hsl(var(--news-accent)); font-weight: 500; text-decoration: none;">
+                            Datenschutz
+                        </a>
+                        <a href="/contact" style="font-size: 0.875rem; color: hsl(var(--news-accent)); font-weight: 500; text-decoration: none;">
+                            Kontakt
+                        </a>
+                        <a href="/shipping-returns" style="font-size: 0.875rem; color: hsl(var(--news-accent)); font-weight: 500; text-decoration: none;">
+                            Versand & Rückgabe
+                        </a>
+                    </div>
+                </div>
+                
+                <div style="font-size: 0.875rem; color: hsl(var(--muted-foreground)); text-align: center;">
+                    <p style="font-weight: 600; margin-bottom: 0.5rem;">Alle Rechte vorbehalten</p>
+                    <p>**Ergebnisse können variieren. Ergebnisse sind nicht garantiert.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Set current date
+        document.addEventListener('DOMContentLoaded', function() {
+            const dateElement = document.getElementById('publish-date');
+            const now = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            const dateString = 'Veröffentlicht: ' + now.toLocaleDateString('de-DE', options);
+            dateElement.textContent = dateString;
+        });
+
+        // Social sharing functions
+        function shareFacebook() {
+            const url = encodeURIComponent(window.location.href);
+            window.open('https://www.facebook.com/sharer/sharer.php?u=' + url, '_blank');
+        }
+
+        function shareTwitter() {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent('Berliner Ärzte enthüllen: Beseitigen Sie Bauchfett');
+            window.open('https://twitter.com/intent/tweet?url=' + url + '&text=' + text, '_blank');
+        }
+
+        function sharePinterest() {
+            const url = encodeURIComponent(window.location.href);
+            const description = encodeURIComponent('Berliner Ärzte enthüllen: Beseitigen Sie Bauchfett');
+            window.open('https://pinterest.com/pin/create/button/?url=' + url + '&description=' + description, '_blank');
+        }
+    </script>
+
+    <!-- Tracking Script -->
+    <script>!function(){"use strict";var n="lp_ref",t="cpid",e="lpurl",c="https://globalvisitlog.com",r="(?<domain>http(?:s?)://[^/]*)".concat("/cf/click"),a="(?:(?:/(?<cta>[1-9][0-9]*)/?)|(?:/))?",i="^".concat(r).concat(a).concat("(?:$|(\\?.*))"),o='javascript:window.clickflare.l="(?<original_link>'.concat(r).concat(a,'("|(\\?[^"]*"))).*'),s=function(){return new RegExp(i,"")},u=function(){return new RegExp(o,"")};function l(n){var t=function(n){return n.replace(s(),(function(n){for(var t=[],e=1;e<arguments.length;e++)t[e-1]=arguments[e];var r=t[t.length-1].domain;return n.replace(r,c)}))}(n);return'javascript:window.clickflare.l="'.concat(t,'"; void 0;')}function d(n,t){if(t&&n&&t.apply(document,[n]),/loaded|interactive|complete/.test(document.readyState))for(var e=0,c=document.links.length;e<c;e++)if(s().test(document.links[e].href)){var r=document.links[e];window.clickflare.links_replaced.has(r)||(r.href=l(r.href),window.clickflare.links_replaced.add(r))}}var f,h,m,p;!function(r,a){var i=document.onreadystatechange;window.clickflare||(window.clickflare={listeners:{},customParams:{},links_replaced:new Set,addEventListener:function(n,t){var e=this.listeners[n]||[];e.includes(t)||e.push(t),this.listeners[n]=e},dispatchEvent:function(n,t){t&&(this.customParams[n]=t),(this.listeners[n]||[]).forEach((function(n){return n(t)}))},push:function(n,t){t&&(this.customParams[n]=t),(this.listeners[n]||[]).forEach((function(n){return n(t)}))}},document.onreadystatechange=function(n){return d(n,i)},d(null,i),setTimeout((function(){!function(r,a){var i,o=function(r,a){var i=new URL("".concat(c).concat(r)),o="{",s=o+o;a.startsWith(s)||i.searchParams.set(t,a);return i.searchParams.append(n,document.referrer),i.searchParams.append(e,location.href),i.searchParams.append("lpt",document.title),i.searchParams.append("t",(new Date).getTime().toString()),i.toString()}(r,a),s=document.createElement("script"),l=document.scripts[0];s.async=1,s.src=o,s.onerror=function(){!function(){for(var n=function(n,t){var e=document.links[n];u().test(decodeURI(e.href))&&setTimeout((function(){e&&e.setAttribute("href",function(n){var t=n.match(u());if(t){var e=(t.groups||{}).original_link;return e?e.slice(0:-1):n}return n}(decodeURI(e.href)))}))},t=0,e=document.links.length;t<e;t++)n(t)}()},null===(i=l.parentNode)||void 0===i||i.insertBefore(s,l)}(r,a)})))}("".concat("/cf/tags","/").concat(new URL(window.location.href).searchParams.get("cftmid")||"{{__CONTAINER_ID__}}"),(m=new URL(window.location.href).searchParams.get(t),f=new RegExp("(^| )".concat("cf_cpid","=([^;]+)")),p=(h=document.cookie.match(f))&&h.pop()||null,m||p||"{{__CAMPAIGN_ID__}}"))}();</script>
+</body>
+</html>
