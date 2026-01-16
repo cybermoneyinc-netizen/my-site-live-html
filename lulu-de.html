@@ -8,499 +8,359 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* RESET & BASE STYLES */
+        /* --- NEWS PORTAL THEME --- */
+        :root {
+            --news-red: #c00;
+            --news-dark: #222;
+            --news-grey: #f4f4f4;
+            --news-border: #ddd;
+            --news-blue: #004e8c;
+        }
+
         * { box-sizing: border-box; margin: 0; padding: 0; }
         
         body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #ffffff;
-            color: #333333;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #fff;
+            color: #111;
             line-height: 1.6;
-            font-size: 19px;
+            font-size: 18px;
         }
 
-        a { color: #72c934; text-decoration: underline; font-weight: bold; }
-        a:hover { color: #6d7680; }
+        a { color: var(--news-blue); text-decoration: none; border-bottom: 1px solid #cce0f5; }
+        a:hover { background-color: #eef5fc; color: #000; }
         
-        img { max-width: 100%; height: auto; display: block; margin: 0 auto 25px auto; border-radius: 4px; }
+        img { max-width: 100%; height: auto; display: block; margin: 0 auto 15px auto; }
+
+        /* HEADER */
+        .advertorial-header {
+            background: #fff;
+            border-bottom: 1px solid #000;
+            padding: 10px 20px;
+        }
         
-        /* HEADER STYLES */
-        .top-advertorial-bar {
-            background-color: #f1f1f1;
-            font-size: 11px;
-            color: #666;
-            text-align: center;
-            padding: 5px 0;
+        .top-label {
+            font-size: 10px;
+            color: #888;
             text-transform: uppercase;
             letter-spacing: 1px;
+            margin-bottom: 5px;
+            display: block;
+            text-align: right;
         }
 
-        .navbar {
-            background: #ffffff;
-            border-bottom: 1px solid #eaeaea;
-            padding: 15px 0;
-            margin-bottom: 30px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
-        }
-
-        .nav-inner {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .brand-logo {
-            font-family: 'Roboto', sans-serif;
+        .news-logo {
+            font-family: 'Merriweather', serif;
             font-weight: 900;
-            font-size: 22px;
-            color: #333;
-            text-decoration: none;
+            font-size: 28px;
             text-transform: uppercase;
-            letter-spacing: -0.5px;
+            letter-spacing: -1px;
+            color: #000;
+            border-bottom: 4px solid var(--news-red);
+            display: inline-block;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .nav-bar {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 10px 0;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
         }
         
-        .nav-links-desktop {
+        .nav-inner {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
             display: flex;
             gap: 20px;
         }
-
-        .nav-links-desktop a {
-            font-size: 13px;
-            font-weight: 500;
-            color: #666;
-            text-decoration: none;
-            text-transform: uppercase;
-        }
         
-        .nav-links-desktop a:hover { color: #72c934; }
+        .nav-inner a { color: #fff; border: none; }
+        .nav-inner a:hover { color: #ccc; background: none; }
 
-        /* LAYOUT CONTAINER */
+        /* MAIN CONTENT */
         .container {
-            max-width: 800px;
+            max-width: 960px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
         }
 
-        .content-wrapper {
-            background: #fff;
-            padding: 10px;
+        .main-col {
+            flex: 1;
+            min-width: 300px;
         }
 
         /* TYPOGRAPHY */
         h1 {
-            text-align: center;
+            font-family: 'Merriweather', serif;
             font-weight: 900;
-            font-size: 34px;
-            line-height: 1.2;
+            font-size: 38px;
+            line-height: 1.1;
+            margin-bottom: 15px;
+            color: #000;
+        }
+
+        .meta-data {
+            font-size: 13px;
+            color: #666;
             margin-bottom: 25px;
-            color: #1a1a1a;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
         }
 
         h2 {
+            font-family: 'Merriweather', serif;
             font-weight: 700;
-            font-size: 26px;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            color: #333;
-            text-align: center;
-            border-bottom: 2px solid #f0f0f0;
-            padding-bottom: 15px;
+            font-size: 24px;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            color: #111;
         }
-        
-        p { margin-bottom: 25px; }
-        
-        strong { font-weight: 700; }
-        
-        ul { margin-bottom: 25px; padding-left: 20px; }
+
+        p { margin-bottom: 18px; text-align: justify; }
+
+        ul { margin-bottom: 25px; padding-left: 20px; border-left: 3px solid var(--news-red); background: #fafafa; padding: 20px 20px 20px 40px; }
         li { margin-bottom: 10px; }
 
-        /* HIGHLIGHTS */
+        /* HIGHLIGHT BOX (News Style) */
         .highlight-box {
-            background-color: #fef5c4;
-            border: 1px solid #fadf98;
-            padding: 20px;
-            font-size: 20px;
-            margin: 30px 0;
-            border-radius: 4px;
-            font-weight: bold;
-            text-align: center;
-        }
-
-        /* TESTIMONIALS */
-        .testimonial-box {
-            background-color: #f8f9fa;
-            border: 1px solid #e9ecef;
-            padding: 20px;
-            border-radius: 5px;
-            margin-bottom: 30px;
-        }
-        
-        .stars { color: #fcb900; margin-left: 5px; }
-
-        /* --- INTERACTIVE GAME STYLES --- */
-        .game-wrapper {
-            background: #f9f9f9;
-            border: 2px dashed #72c934;
-            border-radius: 10px;
-            padding: 30px;
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        .game-title {
+            background-color: #fff;
+            border-top: 2px solid var(--news-red);
+            border-bottom: 2px solid var(--news-red);
+            padding: 20px 0;
+            font-family: 'Merriweather', serif;
+            font-style: italic;
             font-size: 22px;
-            font-weight: bold;
-            margin-bottom: 10px;
             color: #333;
+            text-align: center;
+            margin: 30px 0;
         }
 
-        .game-instructions {
-            font-size: 16px;
-            color: #666;
-            margin-bottom: 25px;
-        }
-
-        .boxes-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
+        /* TESTIMONIALS (News Sidebar Style) */
+        .testimonial-box {
+            background: #f8f9fa;
+            border-left: 4px solid var(--news-blue);
+            padding: 15px;
             margin-bottom: 20px;
-        }
-
-        .mystery-box {
-            background: #fff;
-            border: 2px solid #ddd;
-            border-radius: 10px;
-            width: 100px;
-            height: 100px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 40px;
-            cursor: pointer;
-            transition: transform 0.2s, background 0.3s;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        .mystery-box:hover {
-            transform: scale(1.05);
-            border-color: #72c934;
-        }
-
-        .result-area {
-            display: none; /* Hidden by default */
-            margin-top: 20px;
-            animation: fadeIn 0.5s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .congrats-text {
-            color: #72c934;
-            font-weight: 900;
-            font-size: 24px;
-            margin-bottom: 10px;
+            font-size: 16px;
         }
 
         /* CTA BUTTON */
         .btn-primary {
-            background-color: #72c934;
+            background-color: #d92027; /* Signal Red */
             color: #ffffff;
-            font-size: 24px;
-            font-weight: 900;
-            padding: 20px 30px;
+            font-size: 22px;
+            font-weight: 700;
+            padding: 18px 30px;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 3px;
             display: block;
-            margin: 20px auto;
+            margin: 30px auto;
             width: 100%;
-            max-width: 600px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: all 0.2s ease-in-out;
+            border: none;
             text-align: center;
             text-transform: uppercase;
-            animation: pulse 2s infinite;
         }
-        
-        .btn-primary:hover {
-            background-color: #5aa12a;
-            color: white;
-            text-decoration: none;
-            transform: translateY(-2px);
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.02); }
-            100% { transform: scale(1); }
-        }
+        .btn-primary:hover { background-color: #a00; color: #fff; }
 
         /* FOOTER */
         .site-footer {
-            background-color: #f5f5f5;
+            background: #f4f4f4;
+            border-top: 1px solid #ddd;
             padding: 40px 20px;
-            font-size: 14px;
+            font-size: 12px;
             color: #666;
             margin-top: 50px;
-            border-top: 1px solid #e0e0e0;
+            text-align: center;
         }
 
-        .footer-links {
-            text-align: center;
-            margin-bottom: 20px;
-        }
+        .footer-links a { color: #555; margin: 0 10px; border:none; }
+        .fda-box { border: 1px solid #ccc; padding: 10px; margin-top: 20px; font-size: 11px; text-align: left; }
 
-        .footer-links a {
-            color: #666;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 14px;
-        }
-
-        .disclaimer-text {
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto 15px auto;
-            line-height: 1.5;
-        }
-
-        .copyright {
-            text-align: center;
-            margin-top: 20px;
-            font-weight: bold;
-        }
-        
-        .fda-box {
-            text-align: center;
+        /* --- EMBEDDED WHEEL CSS (Preserved & Adapted) --- */
+        .spin-game-wrapper {
+            background: #ffffff;
             border: 1px solid #ddd;
-            padding: 15px;
-            font-size: 12px;
-            background: #fff;
-            margin-top: 20px;
-            color: #777;
+            padding: 20px;
+            max-width: 100%;
+            margin: 40px auto;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
         }
+        .game-headline { font-family: 'Merriweather', serif; font-size: 24px; font-weight: 900; color: #333; margin-bottom: 5px; text-transform: uppercase; }
+        .game-subhead { font-size: 16px; color: #555; margin-bottom: 25px; }
+        .wheel-container { position: relative; width: 300px; height: 300px; margin: 0 auto 30px auto; border-radius: 50%; border: 8px solid #fff; box-shadow: 0 0 0 2px #ccc, 0 5px 15px rgba(0,0,0,0.2); }
+        .wheel { width: 100%; height: 100%; border-radius: 50%; transition: transform 4s cubic-bezier(0.15, 0, 0.2, 1); position: relative; background: conic-gradient( #72c934 0deg 60deg, #ffffff 60deg 120deg, #72c934 120deg 180deg, #ffffff 180deg 240deg, #72c934 240deg 300deg, #ffffff 300deg 360deg ); }
+        .wheel-label { position: absolute; top: 50%; left: 50%; width: 140px; height: 30px; margin-top: -15px; transform-origin: 0% 50%; text-align: right; padding-right: 35px; font-weight: 900; font-size: 24px; line-height: 30px; z-index: 2; text-shadow: 0 1px 1px rgba(0,0,0,0.1); }
+        .lbl-1 { transform: rotate(-60deg); color: #fff; } .lbl-2 { transform: rotate(0deg); color: #333; } .lbl-3 { transform: rotate(60deg); color: #fff; } .lbl-4 { transform: rotate(120deg); color: #333; } .lbl-5 { transform: rotate(180deg); color: #fff; } .lbl-6 { transform: rotate(240deg); color: #333; }
+        .center-cap { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 50px; height: 50px; background: #fff; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.2); z-index: 10; border: 4px solid #72c934; display: flex; align-items: center; justify-content: center; font-size: 24px; }
+        .wheel-pointer { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); width: 40px; height: 40px; background: #d32f2f; clip-path: polygon(100% 0, 50% 100%, 0 0); z-index: 15; }
+        .spin-btn { background-color: #d32f2f; color: white; font-size: 20px; font-weight: 900; border: none; padding: 15px 50px; border-radius: 4px; cursor: pointer; text-transform: uppercase; width: 100%; max-width: 350px; }
+        .spin-btn:disabled { background-color: #ccc; cursor: default; }
+        .winner-overlay { display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.98); z-index: 20; flex-direction: column; justify-content: center; align-items: center; animation: fadeIn 0.5s forwards; padding: 20px; }
+        .win-title { font-size: 28px; color: #72c934; font-weight: 900; margin-bottom: 10px; text-transform: uppercase; animation: popIn 0.5s ease; }
+        .win-desc { font-size: 18px; margin-bottom: 20px; color: #333; }
+        .final-cta-btn { background-color: #72c934; color: white; font-size: 20px; font-weight: bold; text-decoration: none; padding: 15px 30px; border-radius: 4px; display: inline-block; animation: pulse 1.5s infinite; text-transform: uppercase; }
+        .confetti { position: absolute; width: 8px; height: 8px; background-color: #f00; animation: fall linear forwards; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } } @keyframes popIn { from { transform: scale(0.5); opacity:0; } to { transform: scale(1); opacity:1; } } @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } } @keyframes fall { to { transform: translateY(700px) rotate(720deg); } }
 
-        /* RESPONSIVE */
+        /* FB COMMENTS */
+        .fb-comments-wrapper { background: #fff; border-top: 4px solid #000; padding: 20px 0; margin: 40px auto; font-family: Arial, sans-serif; }
+        .fb-header-title { font-size: 20px; font-weight: bold; color: #000; border-bottom: 1px solid #ccc; padding-bottom: 10px; margin-bottom: 20px; }
+        .fb-comment { display: flex; margin-bottom: 20px; align-items: flex-start; border-bottom: 1px solid #f0f0f0; padding-bottom: 10px; }
+        .fb-comment.indented { margin-left: 40px; border-left: 3px solid #f0f0f0; padding-left: 10px; border-bottom: none; }
+        .fb-avatar { width: 40px; height: 40px; border-radius: 50%; margin-right: 15px; flex-shrink: 0; }
+        .fb-name { font-weight: bold; font-size: 14px; color: #365899; }
+        .fb-meta { font-size: 11px; color: #999; margin-bottom: 5px; }
+        .fb-text { font-size: 15px; color: #1d2129; line-height: 1.4; margin-bottom: 8px; }
+        .fb-action { font-size: 12px; color: #4267b2; cursor: pointer; }
+        .fb-image-proof { max-width: 200px; border-radius: 3px; margin-top: 5px; }
+
         @media (max-width: 600px) {
-            h1 { font-size: 28px; }
-            .container { padding: 15px; }
-            .btn-primary { font-size: 20px; padding: 15px; }
-            .nav-links-desktop { display: none; }
-            .brand-logo { font-size: 20px; }
-            .boxes-container { gap: 10px; }
-            .mystery-box { width: 80px; height: 80px; font-size: 30px; }
+            h1 { font-size: 26px; }
+            .nav-inner { display: none; } /* Hide detailed nav on mobile */
+            .news-logo { font-size: 22px; }
         }
     </style>
 </head>
 <body>
 
-    <div class="top-advertorial-bar">
-        Anzeige
+    <div class="advertorial-header">
+        <div class="top-label">Anzeige</div>
+        <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+            <div class="news-logo">GESUNDHEIT HEUTE</div>
+        </div>
+    </div>
+    <div class="nav-bar">
+        <div class="nav-inner">
+            <a href="#">Nachrichten</a>
+            <a href="#">Politik</a>
+            <a href="#" style="color: #ff9999;">Gesundheit</a>
+            <a href="#">Wissen</a>
+            <a href="#">Reise</a>
+        </div>
     </div>
 
-    <nav class="navbar">
-        <div class="nav-inner">
-            <a href="#" class="brand-logo">TäglicherWellnessBlog</a>
-            <div class="nav-links-desktop">
-                <a href="#">Geschichten</a>
-                <a href="#">Gesundheit</a>
-                <a href="#">Lifestyle</a>
-                <a href="#">Kontakt</a>
-            </div>
-        </div>
-    </nav>
-
     <div class="container">
-        <div class="content-wrapper">
-            
+        <div class="main-col">
+            <div class="meta-data">
+                <strong>Gesundheit & Ernährung</strong> | Von Redaktion | Aktualisiert: 16.01.2026
+            </div>
+
             <h1>Jahrelang habe ich gelitten – bis ich dieses "Warmwasser-Ritual" entdeckte, das meinen Stoffwechsel explodieren ließ</h1>
-              <img src="./lulu10/scp.jpg" alt="Transformation" style="margin-top: 20px;">
-            <img src="./lulu10/168-1.jpeg" alt="Transformation" style="margin-top: 20px;">
-          
-         
-
-            <p>Ich war gefangen in einem Körper, den ich nicht mehr mochte... Dann fand ich das hier.</p>
-
+            
+            <img src="./lulu10/scp.jpg" alt="Transformation" style="width:100%; border-bottom: 4px solid var(--news-red);">
+            
+            <p style="font-weight: bold; font-size: 20px; color: #444;">Ich war gefangen in einem Körper, den ich nicht mehr mochte... Dann fand ich das hier.</p>
+            
+            <img src="./lulu10/168-1.jpeg" alt="Transformation" style="float: right; width: 45%; margin-left: 20px; margin-bottom: 20px;">
+            
             <p>Ich erinnere mich noch genau an den Moment, als ich wusste: Es muss sich etwas ändern.</p>
-
             <p>Es war an einem Sommernachmittag. Ich machte mich fertig, um mit meinen Enkelkindern ins Schwimmbad zu gehen.</p>
-
             <p>Ich warf einen Blick auf meinen Badeanzug und dann in den Spiegel. Mir wurde einfach nur übel.</p>
-
+            
             <img src="./lulu10/98043438094038349.webp" alt="Traurige Frau im Spiegel">
-
+            
             <p>Ich kam da nicht mehr raus.</p>
-
             <p>Also zog ich ein riesiges Schlabber-Shirt an, erzählte den Kleinen, ich sei heute einfach zu müde, und wir würden an einem anderen Tag gehen.</p>
-
             <p>Traurigerweise kam dieser Tag nie.</p>
-
             <p>Ich mied nicht nur Badeanzüge – ich mied das Leben.</p>
 
             <div class="highlight-box">
-                Schon wieder von vorne anfangen... ich war es so leid. Hält dein Gewicht dich auch davon ab, das Leben zu leben, das du willst? Ich war genau an diesem Punkt.
+                "Schon wieder von vorne anfangen... ich war es so leid. Hält dein Gewicht dich auch davon ab, das Leben zu leben, das du willst?"
             </div>
 
             <p>Ich habe immer alle anderen an erste Stelle gesetzt: meine Familie, meinen Job. Mich selbst zu pflegen, kam immer erst ganz zum Schluss.</p>
-
             <p>Ich war immer diese "Am Montag fange ich an"-Person. Und diesmal, komme was wolle, wollte ich es durchziehen.</p>
 
             <h2>Ich habe jeden neuen Trend ausprobiert</h2>
-
             <img src="./lulu10/43098438948334.webp" alt="Frustriert mit Pillen">
-
             <p>Keto, Kalorienzählen, Vorkochen.</p>
-
             <p>Jedes Mal dachte ich: Das ist es. Das ist das Ding, das für mich funktioniert.</p>
-
             <p>Jedes Mal fing ich super an, verlor ein paar Pfund – und dann kam das Leben dazwischen.</p>
-
             <p>Ich bekam Stress, oder ich erreichte ein Plateau, und zack – war ich wieder genau dort, wo ich angefangen hatte.</p>
-
             <p>Und manchmal nahm ich sogar noch mehr zu.</p>
-
             <p>In was für einem elenden Teufelskreis ich steckte: Diät halten und hungern oder Fressanfälle und Schuldgefühle.</p>
-
             <p>Es gab nur das eine oder das andere.</p>
-
             <p><strong>Ich dachte, es sei meine Schuld. Ich dachte, ich habe einfach keine Willenskraft. Mein Stoffwechsel war eingeschlafen.</strong></p>
-
             <p>Vielleicht war es mein Schicksal, für den Rest meines Lebens übergewichtig zu sein.</p>
-
             <p>Ich war einfach nur müde.</p>
-
             <p>Müde davon, mich auf Fotos zu verstecken.</p>
-
             <p>Müde davon, mich auf Familienfeiern unwohl zu fühlen.</p>
-
             <p>Müde davon, keine Kleidung zu finden, die richtig sitzt.</p>
-
             <p>Müde davon, mich zu verhüllen, während andere Frauen trugen, was sie wollten.</p>
-
             <p>Müde von dem Druck, auf eine bestimmte Weise auszusehen und mich trotzdem gut fühlen zu müssen.</p>
-
             <p>Die Leute bemerkten es, wenn ich abnahm. Sie sagten: "Wow, du siehst toll aus!"</p>
-
             <p>Und dann nahm ich alles wieder zu. Ich konnte spüren, wie sie mich ansahen.</p>
-
             <p>Es war peinlich. Ich wollte das Gewicht verlieren – und es für immer loswerden.</p>
-
             <p>Ich wollte so sehr mögen, was ich im Spiegel sah.</p>
-
             <p>Ich wollte mich so sehr leichter und glücklicher fühlen – für immer.</p>
 
             <h2>Dann passierte es: Ich fand etwas, das funktionierte</h2>
-
             <img src="./lulu10/43290839084209834289.webp" alt="Gespräch mit Freundin">
-
             <p>Da ich alle modischen Diäten durchhatte, suchte ich eigentlich nicht nach etwas Neuem.</p>
-
             <p>Das Thema war für mich durch. Ich hatte es satt zu scheitern.</p>
-
             <p>Dann hörte ich vom <strong>"Warmwasser-Trick"</strong> und dachte mir: Hä, ernsthaft?</p>
-
             <p>Ich dachte, es sei viel zu simpel. Aber es soll eine versteckte Reaktion im Körper auslösen, die das Fett quasi "wegschmelzen" lässt. Das war der Moment, in dem sich alles änderte.</p>
-
             <p>Keine Diät. Kein Trainingsplan. Keine weitere "Wunderpille".</p>
-
             <p>So einfach, dass ich es fast ignoriert hätte.</p>
-
             <p>Jeden Tag bemerkte ich eine Veränderung.</p>
-
             <p>Kein Heißhunger, keine nächtlichen Snacks, kein Frustessen.</p>
-
             <p>Mein Körper fühlte sich an, als würde er von innen gereinigt und als wäre mein Stoffwechsel endlich aufgewacht.</p>
-
             <p>Ich verlor Gewicht. Ohne zu hungern, ohne Schuldgefühle.</p>
-
             <p>Und weißt du was? <strong>Es war einfach.</strong></p>
-
             <p>Ich befolge keine verrückten Regeln.</p>
-
             <p>Ich zähle keine Kalorien.</p>
-
             <p>Ich mache keine erschöpfenden Workouts.</p>
-
             <p>Ich stecke nicht in einem Zyklus aus Verzicht und Versagen fest.</p>
-
             <p>Kein ständiges Wiegen, kein ständiges Nachdenken über Essen.</p>
 
-            <div class="highlight-box">
-                Endlich Erfolg!
-            </div>
-
             <img src="./lulu10/bf1.jpeg" alt="Glückliche Frau am Strand">
-
             <p>Mein Körper fühlt sich 10 Jahre jünger an. Ich fühle mich leichter, glücklicher und voller Energie.</p>
-
             <p>Ich liebe die Kleidung, die ich trage, und ich verstecke meinen Körper nicht mehr.</p>
-
             <p>Ich mache mir keine Sorgen um Essen oder mein Aussehen.</p>
-
             <p>Zum ersten Mal in meinem Leben habe ich die Kontrolle.</p>
-
             <p>Keine langen Stunden im Fitnessstudio oder Verzicht auf meine Lieblingsspeisen.</p>
-
             <p>Diäten bestimmen mein Leben nicht mehr.</p>
-
             <p>Ich bin nicht erschöpft, überfordert oder schäme mich.</p>
-
             <p>Ich kenne jetzt die Wahrheit: Diäten sind nicht nur für Leute mit Disziplin oder guten Genen.</p>
-
             <p><strong>Es lag nicht an mir – die Diäten waren das Problem.</strong></p>
 
             <h2>Es war zu schön, um wahr zu sein...</h2>
-
             <p>Zuerst glaubte ich es nicht. Wie konnte etwas so Einfaches funktionieren?</p>
-
             <p>Am Ende der ersten Woche...</p>
-
             <ul>
                 <li>Fast kein Heißhunger mehr.</li>
                 <li>Ich fühle mich leichter, weniger aufgebläht und voller Energie.</li>
                 <li>Zwei Kilo weg!</li>
             </ul>
-
             <p>Und ich war nicht die Einzige, die es bemerkte.</p>
-
             <p>Meine Schwester lachte. "Niemals funktioniert das", sagte sie. Und dann probierte sie es. Und es funktionierte auch bei ihr!</p>
-
             <p>Sie nahm im ersten Monat 7 Kilo ab.</p>
-
             <p>Meine beste Freundin, noch so eine Erfolgsgeschichte. "Was zur Hölle?!" Nach zwei Wochen passte sie in zwei Hosengrößen kleiner.</p>
-
             <p>Da traf es mich wie ein Blitz: Das war nicht nur für mich. Jede Frau musste davon erfahren.</p>
-
             <p>Es ist meine Realität, nicht nur ein Wunschtraum. Du hast wahrscheinlich jede Diät da draußen ausprobiert. Jetzt ist es anders.</p>
-
             <p>Probier es nur einmal aus – du wirst innerhalb von Tagen wissen, ob es für dich funktioniert, genau wie bei mir.</p>
-<video 
-    src="./lulu10/gif1.mp4" 
-    autoplay 
-    loop 
-    muted 
-    playsinline 
-    style="max-width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 8px;">
-</video>
+            
+            <video src="./lulu10/gif1.mp4" autoplay loop muted playsinline style="max-width: 100%; height: auto; display: block; margin: 20px auto; border-radius: 4px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);"></video>
+
             <h2>Das Geheimnis hinter dem "Warmwasser-Ritual"</h2>
-
             <p>Was genau ist also dieser "Trick", der mein Leben verändert hat?</p>
-
             <p>Es stellt sich heraus, mein Erfolg war keine Magie. Es war ein einfaches, wohltuendes Ritual mit einem speziellen Tee namens <strong><a href="https://trk.cmclk.com/cf/click/1" target="_blank">Lulutox</a></strong>.</p>
-
             <p>Im Gegensatz zu Pillen, die mir auf den Magen schlugen, oder Shakes, die nach Kreide schmeckten, ist Lulutox eine köstliche Mischung aus uralten Superfoods, die man warm genießt und die <em>mit</em> deinem Körper arbeiten, nicht gegen ihn.</p>
-
             <p>Es wirkt als das ultimative <strong>"Stoffwechsel-Elixier für die Wechseljahre"</strong> auf 3 kraftvolle Arten:</p>
-
             <ul>
                 <li>🔥 <strong>Stoffwechsel-Aktivierung:</strong> Zutaten wie Oolong und Matcha zünden die Kalorienverbrennung auf natürliche Weise.</li>
                 <li>🚽 <strong>Sanfte Entschlackung:</strong> Das warme Elixier spült sanft die "Altlasten" und Giftstoffe aus, die dich aufgebläht und schwer fühlen lassen.</li>
@@ -508,522 +368,112 @@
             </ul>
 
             <h2>Echte Menschen, Echte Ergebnisse</h2>
-
-            <img src="./lulu10/srxvzke_hero-17.jpg" alt="Erfahrungsbericht 1">
-
-            <div class="testimonial-box">
-                <p><strong>⭐⭐⭐⭐⭐ "23 Kilo runter!"</strong><br>
-                "Absolut unglaublich! 23 Kilo in 3 Monaten. Ich hätte nie gedacht, dass Abnehmen so einfach sein könnte. Sehr zu empfehlen!"</p>
-                <p>— Sarah W.</p>
-            </div>
-
-            <img src="./lulu10/b7ti0gz_hero-11.jpg" alt="Erfahrungsbericht 2">
-
-            <div class="testimonial-box">
-                <p><strong>⭐⭐⭐⭐⭐ "14 Kilo weg in 6 Wochen!"</strong><br>
-                "Ich passe endlich wieder in mein Hochzeitskleid! Dieses Produkt hat mein Leben komplett verändert!"</p>
-                <p>— Katharina B.</p>
-            </div>
- <img src="./lulu10/lisa-smith-testimonial.jpg" alt="Erfahrungsbericht 2">
-
-            <div class="testimonial-box">
-                <p><strong>⭐⭐⭐⭐⭐ "Das Beste, was mir passieren konnte"</strong><br>
-                "Ich trinke es jeden Abend warm. Es schmeckt lecker nach Pfirsich und der Blähbauch ist sofort weg. Ich liebe es."</p>
-                <p>— Sabine K.</p>
+            
+            <div style="background: #eee; padding: 20px; margin-bottom: 30px;">
+                <img src="./lulu10/srxvzke_hero-17.jpg" alt="Erfahrungsbericht 1">
+                <div class="testimonial-box">
+                    <p><strong>⭐⭐⭐⭐⭐ "23 Kilo runter!"</strong><br>
+                    "Absolut unglaublich! 23 Kilo in 3 Monaten. Ich hätte nie gedacht, dass Abnehmen so einfach sein könnte. Sehr zu empfehlen!"</p>
+                    <p>— Sarah W.</p>
+                </div>
+                
+                <img src="./lulu10/b7ti0gz_hero-11.jpg" alt="Erfahrungsbericht 2">
+                <div class="testimonial-box">
+                    <p><strong>⭐⭐⭐⭐⭐ "14 Kilo weg in 6 Wochen!"</strong><br>
+                    "Ich passe endlich wieder in mein Hochzeitskleid! Dieses Produkt hat mein Leben komplett verändert!"</p>
+                    <p>— Katharina B.</p>
+                </div> 
+                
+                <img src="./lulu10/lisa-smith-testimonial.jpg" alt="Erfahrungsbericht 2">
+                <div class="testimonial-box">
+                    <p><strong>⭐⭐⭐⭐⭐ "Das Beste, was mir passieren konnte"</strong><br>
+                    "Ich trinke es jeden Abend warm. Es schmeckt lecker nach Pfirsich und der Blähbauch ist sofort weg. Ich liebe es."</p>
+                    <p>— Sabine K.</p>
+                </div>
             </div>
 
             <p>Gerade jetzt bietet Lulutox einen speziellen Rabatt für jeden an, der meine Geschichte liest.</p>
+            <p>Wenn du den Kampf leid bist, die Diäten satt hast und es leid bist, dich unsichtbar zu fühlen... <strong>drehe unten am Rad, um deinen exklusiven Rabatt zu gewinnen.</strong></p>
 
-        <p>Wenn du den Kampf leid bist, die Diäten satt hast und es leid bist, dich unsichtbar zu fühlen... <strong>drehe unten am Rad, um deinen exklusiven Rabatt zu gewinnen.</strong></p>
-
-       
-
-<style>
-    /* Game Wrapper */
-    .spin-game-wrapper {
-        background: #ffffff;
-        border: 3px dashed #72c934; /* Benmeds Green */
-        border-radius: 15px;
-        padding: 30px 15px;
-        max-width: 500px;
-        margin: 40px auto;
-        text-align: center;
-        box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-        position: relative;
-        overflow: hidden;
-    }
-
-    .game-headline {
-        font-family: 'Roboto', sans-serif;
-        font-size: 28px;
-        font-weight: 900;
-        color: #333;
-        margin-bottom: 5px;
-        text-transform: uppercase;
-    }
-
-    .game-subhead {
-        font-family: 'Roboto', sans-serif;
-        font-size: 16px;
-        color: #555;
-        margin-bottom: 25px;
-    }
-
-    /* Wheel Container */
-    .wheel-container {
-        position: relative;
-        width: 320px;
-        height: 320px;
-        margin: 0 auto 30px auto;
-        border-radius: 50%;
-        border: 12px solid #fff;
-        box-shadow: 0 0 0 4px #e0e0e0, 0 10px 25px rgba(0,0,0,0.2);
-    }
-
-    .wheel {
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        transition: transform 4s cubic-bezier(0.15, 0, 0.2, 1); /* Realistic spin easing */
-        position: relative;
-        /* 6 Segments (60 degrees each)
-           Starts at 12 o'clock (0deg) and goes clockwise
-        */
-        background: conic-gradient(
-            #72c934 0deg 60deg,    /* 1. Green (0-60) -> 70% */
-            #ffffff 60deg 120deg,  /* 2. White (60-120) -> 20% */
-            #72c934 120deg 180deg, /* 3. Green (120-180) -> 30% */
-            #ffffff 180deg 240deg, /* 4. White (180-240) -> 50% */
-            #72c934 240deg 300deg, /* 5. Green (240-300) -> 10% */
-            #ffffff 300deg 360deg  /* 6. White (300-360) -> 40% */
-        );
-    }
-
-    /* Wheel Labels - Centering Logic */
-    .wheel-label {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 140px; /* Radius from center to edge */
-        height: 30px;
-        margin-top: -15px; /* Vertical center */
-        transform-origin: 0% 50%; /* Pivot point is the center of the wheel */
-        text-align: right; /* Align text to the outer edge */
-        padding-right: 35px; /* Padding to keep text inside the color */
-        font-family: 'Roboto', sans-serif;
-        font-weight: 900;
-        font-size: 28px;
-        line-height: 30px;
-        z-index: 2;
-        /* Slight shadow for readability */
-        text-shadow: 0 1px 1px rgba(0,0,0,0.1);
-    }
-
-    /* ROTATION MAP
-       Text starts pointing 3 o'clock (90deg).
-       We calculate rotation to point to the center of each slice.
-       Formula: SliceCenterAngle - 90deg
-    */
-    
-    /* Slice 1 (0-60) -> Center 30deg -> Rot: -60deg */
-    .lbl-1 { transform: rotate(-60deg); color: #fff; font-size: 32px; } 
-    
-    /* Slice 2 (60-120) -> Center 90deg -> Rot: 0deg */
-    .lbl-2 { transform: rotate(0deg); color: #333; }
-    
-    /* Slice 3 (120-180) -> Center 150deg -> Rot: 60deg */
-    .lbl-3 { transform: rotate(60deg); color: #fff; }
-    
-    /* Slice 4 (180-240) -> Center 210deg -> Rot: 120deg */
-    .lbl-4 { transform: rotate(120deg); color: #333; }
-    
-    /* Slice 5 (240-300) -> Center 270deg -> Rot: 180deg */
-    .lbl-5 { transform: rotate(180deg); color: #fff; } 
-    
-    /* Slice 6 (300-360) -> Center 330deg -> Rot: 240deg */
-    .lbl-6 { transform: rotate(240deg); color: #333; }
-
-
-    /* Center Cap */
-    .center-cap {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 60px;
-        height: 60px;
-        background: #fff;
-        border-radius: 50%;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        z-index: 10;
-        border: 5px solid #72c934;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 28px;
-    }
-
-    /* The Pointer */
-    .wheel-pointer {
-        position: absolute;
-        top: -20px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 50px;
-        height: 50px;
-        background: #d32f2f; /* Red Pointer */
-        clip-path: polygon(100% 0, 50% 100%, 0 0);
-        z-index: 15;
-        filter: drop-shadow(0 4px 2px rgba(0,0,0,0.3));
-    }
-
-    /* Spin Button */
-    .spin-btn {
-        background-color: #d32f2f;
-        color: white;
-        font-family: 'Roboto', sans-serif;
-        font-size: 24px;
-        font-weight: 900;
-        border: none;
-        padding: 18px 60px;
-        border-radius: 50px;
-        cursor: pointer;
-        box-shadow: 0 6px 0 #9a1010, 0 15px 20px rgba(0,0,0,0.2);
-        transition: transform 0.1s;
-        text-transform: uppercase;
-        width: 100%;
-        max-width: 400px;
-    }
-
-    .spin-btn:active {
-        transform: translateY(4px);
-        box-shadow: 0 2px 0 #9a1010;
-    }
-
-    .spin-btn:disabled {
-        background-color: #ccc;
-        box-shadow: none;
-        cursor: default;
-    }
-
-    /* Winner Popup */
-    .winner-overlay {
-        display: none;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(255,255,255,0.98);
-        z-index: 20;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        animation: fadeIn 0.5s forwards;
-        padding: 20px;
-    }
-
-    .win-title {
-        font-size: 32px;
-        color: #72c934;
-        font-weight: 900;
-        margin-bottom: 10px;
-        text-transform: uppercase;
-        animation: popIn 0.5s ease;
-    }
-
-    .win-desc {
-        font-size: 20px;
-        margin-bottom: 30px;
-        color: #333;
-        line-height: 1.4;
-    }
-
-    .final-cta-btn {
-        background-color: #72c934; 
-        color: white;
-        font-size: 22px;
-        font-weight: bold;
-        text-decoration: none;
-        padding: 20px 40px;
-        border-radius: 5px;
-        display: inline-block;
-        box-shadow: 0 4px 15px rgba(114, 201, 52, 0.5);
-        animation: pulse 1.5s infinite;
-        text-transform: uppercase;
-        border-bottom: 4px solid #5aa12a;
-    }
-
-    /* Confetti */
-    .confetti {
-        position: absolute;
-        width: 10px;
-        height: 10px;
-        background-color: #f00;
-        animation: fall linear forwards;
-    }
-
-    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-    @keyframes popIn { from { transform: scale(0.5); opacity:0; } to { transform: scale(1); opacity:1; } }
-    @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
-    @keyframes fall { to { transform: translateY(700px) rotate(720deg); } }
-
-    /* Mobile Tweaks */
-    @media (max-width: 480px) {
-        .wheel-container { width: 280px; height: 280px; }
-        .wheel-label { font-size: 24px; padding-right: 25px; }
-        .spin-btn { font-size: 20px; padding: 15px 30px; }
-    }
-</style>
-
-<div class="spin-game-wrapper">
-    <div class="game-headline">Haben Sie heute Glück?</div>
-    <div class="game-subhead">Drehen Sie das Rad für Ihren exklusiven Rabatt!</div>
-
-    <div class="wheel-container">
-        <div class="wheel-pointer"></div>
-        <div class="wheel" id="spinWheel">
-            <div class="center-cap">🎁</div>
-            
-            <div class="wheel-label lbl-1">70%</div> <div class="wheel-label lbl-2">20%</div> <div class="wheel-label lbl-3">30%</div> <div class="wheel-label lbl-4">50%</div> <div class="wheel-label lbl-5">10%</div> <div class="wheel-label lbl-6">40%</div> </div>
-    </div>
-
-    <button class="spin-btn" id="btnSpin" onclick="spinWheel()">JETZT DREHEN</button>
-
-    <div class="winner-overlay" id="winnerOverlay">
-        <div class="win-title">🎉 GLÜCKWUNSCH!</div>
-        <div class="win-desc">Sie haben den <strong>70% RABATT</strong> Hauptpreis gewonnen!</div>
-        
-        <a href="https://trk.cmclk.com/cf/click/1" target="_blank" class="final-cta-btn">➡️ RABATT JETZT EINLÖSEN</a>
-        
-        <p style="font-size: 13px; margin-top: 20px; color: #888;">Gutschein reserviert für: <span id="timer">10:00</span></p>
-    </div>
-</div>
-
-<script>
-    function spinWheel() {
-        const wheel = document.getElementById('spinWheel');
-        const overlay = document.getElementById('winnerOverlay');
-        const wrapper = document.querySelector('.spin-game-wrapper');
-        const btn = document.getElementById('btnSpin');
-        
-        // Lock button
-        btn.disabled = true;
-        btn.style.opacity = "0.5";
-        btn.innerText = "VIEL GLÜCK...";
-
-        // MATH TO LAND ON 70% (Label 1)
-        // 70% is in Slice 1 (0-60deg). Center is 30deg.
-        // Slice 1 is at 1 o'clock. 
-        // To hit the Pointer (12 o'clock / 0deg), we need to rotate CCW 30deg.
-        // In CSS (CW), that is 330deg.
-        // Add 5 full spins (1800deg) for drama.
-        // Total = 1800 + 330 = 2130deg.
-        
-        const winningDegree = 2130; 
-
-        wheel.style.transform = `rotate(${winningDegree}deg)`;
-
-        // Show result after 4 seconds
-        setTimeout(() => {
-            overlay.style.display = 'flex';
-            triggerConfetti(wrapper);
-            startTimer();
-        }, 4000);
-    }
-
-    function triggerConfetti(container) {
-        const colors = ['#d32f2f', '#72c934', '#fcb900', '#0099ff'];
-        for (let i = 0; i < 60; i++) {
-            const confetti = document.createElement('div');
-            confetti.classList.add('confetti');
-            confetti.style.left = Math.random() * 100 + '%';
-            confetti.style.top = -10 + 'px';
-            confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-            confetti.style.animationDuration = (Math.random() * 3 + 2) + 's';
-            container.appendChild(confetti);
-        }
-    }
-
-    function startTimer() {
-        let duration = 600; // 10 minutes
-        const display = document.querySelector('#timer');
-        setInterval(function () {
-            let minutes = parseInt(duration / 60, 10);
-            let seconds = parseInt(duration % 60, 10);
-
-            minutes = minutes < 10 ? "0" + minutes : minutes;
-            seconds = seconds < 10 ? "0" + seconds : seconds;
-
-            display.textContent = minutes + ":" + seconds;
-
-            if (--duration < 0) {
-                duration = 0;
-            }
-        }, 1000);
-    }
-</script>
-
-            <style>
-    .fb-comments-wrapper {
-        background: #ffffff;
-        border: 1px solid #e5e5e5;
-        border-radius: 8px;
-        padding: 20px;
-        max-width: 800px;
-        margin: 40px auto;
-        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    }
-
-    .fb-header-title {
-        font-size: 18px;
-        font-weight: bold;
-        color: #65676b;
-        border-bottom: 1px solid #e5e5e5;
-        padding-bottom: 15px;
-        margin-bottom: 15px;
-    }
-
-    .fb-comment {
-        display: flex;
-        margin-bottom: 20px;
-        align-items: flex-start;
-    }
-
-    .fb-comment.indented {
-        margin-left: 50px;
-        border-left: 2px solid #f0f2f5;
-        padding-left: 10px;
-    }
-
-    .fb-avatar {
-        width: 45px;
-        height: 45px;
-        border-radius: 50%;
-        margin-right: 12px;
-        flex-shrink: 0;
-        object-fit: cover;
-        background-color: #ddd; /* Fallback color */
-    }
-
-    .fb-content {
-        flex-grow: 1;
-    }
-
-    .fb-name {
-        font-weight: bold;
-        font-size: 15px;
-        color: #050505;
-        margin-bottom: 2px;
-    }
-
-    .fb-meta {
-        font-size: 12px;
-        color: #65676b;
-        margin-bottom: 6px;
-    }
-
-    .fb-text {
-        font-size: 15px;
-        color: #050505;
-        line-height: 1.4;
-        margin-bottom: 8px;
-    }
-
-    .fb-action {
-        font-size: 12px;
-        font-weight: bold;
-        color: #65676b;
-        cursor: pointer;
-        text-decoration: none;
-    }
-
-    .fb-action:hover {
-        text-decoration: underline;
-    }
-
-    .fb-image-proof {
-        max-width: 100%;
-        height: auto;
-        border-radius: 8px;
-        margin-top: 10px;
-        margin-bottom: 5px;
-        border: 1px solid #e5e5e5;
-    }
-
-    /* Mobile tweak */
-    @media (max-width: 600px) {
-        .fb-comment.indented { margin-left: 20px; }
-        .fb-avatar { width: 35px; height: 35px; }
-    }
-</style>
-
-<div class="fb-comments-wrapper">
-    <div class="fb-header-title">Antworten</div>
-
-    <div class="fb-comment">
-        <img src="https://ui-avatars.com/api/?name=Evelyn+Förster&background=random" class="fb-avatar" alt="Evelyn">
-        <div class="fb-content">
-            <div class="fb-name">Evelyn Förster</div>
-            <div class="fb-meta">12.01.2026</div>
-            <div class="fb-text">
-                Hallo zusammen, ich habe ebenfalls mit Hilfe von Lulutox abgenommen. Ganz ehrlich: ich hätte nie gedacht, dass ich ein solches Ergebnis erreichen könnte! Ich hielt es für Unsinn und wollte es nicht einmal ausprobieren, aber meine Schwester hat mich überzeugt. Wir haben es zusammen bestellt und konnten beide abnehmen. In einem Monat habe ich 13 kg verloren und meine Schwester 4,5 kg, aber sie sah trotzdem schlanker aus als ich. Jetzt hat sich mein Gewicht stabilisiert und verändert sich nicht mehr!!! Ich bin super glücklich und empfehle jedem, es mindestens 2 Wochen lang auszuprobieren – dann werdet ihr die ersten Ergebnisse sehen!
+            <div class="spin-game-wrapper">
+                <div class="game-headline">Haben Sie heute Glück?</div>
+                <div class="game-subhead">Drehen Sie das Rad für Ihren exklusiven Rabatt!</div>
+                <div class="wheel-container">
+                    <div class="wheel-pointer"></div>
+                    <div class="wheel" id="spinWheel">
+                        <div class="center-cap">🎁</div>
+                        <div class="wheel-label lbl-1">70%</div> <div class="wheel-label lbl-2">20%</div> <div class="wheel-label lbl-3">30%</div> <div class="wheel-label lbl-4">50%</div> <div class="wheel-label lbl-5">10%</div> <div class="wheel-label lbl-6">40%</div>
+                    </div>
+                </div>
+                <button class="spin-btn" id="btnSpin" onclick="spinWheel()">JETZT DREHEN</button>
+                <div class="winner-overlay" id="winnerOverlay">
+                    <div class="win-title">🎉 GLÜCKWUNSCH!</div>
+                    <div class="win-desc">Sie haben den <strong>70% RABATT</strong> Hauptpreis gewonnen!</div>
+                    <a href="https://trk.cmclk.com/cf/click/1" target="_blank" class="final-cta-btn">➡️ RABATT JETZT EINLÖSEN</a>
+                    <p style="font-size: 13px; margin-top: 20px; color: #888;">Gutschein reserviert für: <span id="timer">10:00</span></p>
+                </div>
             </div>
-            <img src="./lulu10/10a1.jpg" class="fb-image-proof" alt="Evelyn Transformation"> 
-            <div class="fb-action">Antworten</div>
-        </div>
-    </div>
 
-    <div class="fb-comment">
-        <img src="https://ui-avatars.com/api/?name=Eleonore+Lachmann&background=random" class="fb-avatar" alt="Eleonore">
-        <div class="fb-content">
-            <div class="fb-name">Eleonore Lachmann</div>
-            <div class="fb-meta">12.01.2026</div>
-            <div class="fb-text">
-                Du hast Fett im Gehirn – selbst wenn du abnimmst, nimmst du sofort wieder zu, sobald du nur ein bisschen mehr isst.
-            </div>
-            <div class="fb-action">Antworten</div>
-        </div>
-    </div>
+            <div class="fb-comments-wrapper">
+                <div class="fb-header-title">Leserkommentare (24)</div>
 
-    <div class="fb-comment">
-        <img src="https://ui-avatars.com/api/?name=Winona+Evers&background=random" class="fb-avatar" alt="Winona">
-        <div class="fb-content">
-            <div class="fb-name">Winona Evers</div>
-            <div class="fb-meta">12.01.2026</div>
-            <div class="fb-text">
-                Mädels, hört nicht auf andere – macht, was euch glücklich macht. Wenn ich es geschafft habe, schafft ihr das auch! Ich empfehle Lulutox jedem, es hat mir sehr geholfen.
-            </div>
-            <div class="fb-action">Antworten</div>
-        </div>
-    </div>
+                <div class="fb-comment">
+                    <img src="https://ui-avatars.com/api/?name=Evelyn+Förster&background=random" class="fb-avatar" alt="Evelyn">
+                    <div class="fb-content">
+                        <div class="fb-name">Evelyn Förster</div>
+                        <div class="fb-meta">12.01.2026</div>
+                        <div class="fb-text">Hallo zusammen, ich habe ebenfalls mit Hilfe von Lulutox abgenommen. Ganz ehrlich: ich hätte nie gedacht, dass ich ein solches Ergebnis erreichen könnte! Ich hielt es für Unsinn und wollte es nicht einmal ausprobieren, aber meine Schwester hat mich überzeugt. Wir haben es zusammen bestellt und konnten beide abnehmen. In einem Monat habe ich 13 kg verloren und meine Schwester 4,5 kg, aber sie sah trotzdem schlanker aus als ich. Jetzt hat sich mein Gewicht stabilisiert und verändert sich nicht mehr!!! Ich bin super glücklich und empfehle jedem, es mindestens 2 Wochen lang auszuprobieren – dann werdet ihr die ersten Ergebnisse sehen!</div>
+                        <img src="./lulu10/10a1.jpg" class="fb-image-proof" alt="Evelyn Transformation"> 
+                        <div class="fb-action">Antworten</div>
+                    </div>
+                </div>
 
-    <div class="fb-comment">
-        <img src="https://ui-avatars.com/api/?name=Abigail+Lehmann&background=random" class="fb-avatar" alt="Abigail">
-        <div class="fb-content">
-            <div class="fb-name">Abigail Lehmann</div>
-            <div class="fb-meta">11.01.2026</div>
-            <div class="fb-text">
-                Wow!! Das ist der zweite Tag, an dem ich es nehme, und ich habe schon bemerkt, dass ich ruhiger bin, mein Appetit nachgelassen hat, ich keine Lust mehr auf Süßes habe und meine Laune super ist. Alles läuft perfekt!!!
-            </div>
-            <div class="fb-action">Antworten</div>
-        </div>
-    </div>
-
-    <div class="fb-comment">
-        <img src="https://ui-avatars.com/api/?name=Stella+Dubber&background=random" class="fb-avatar" alt="Stella">
-        <div class="fb-content">
-            <div class="fb-name">Stella Dubber</div>
-            <div class="fb-meta">11.01.2026</div>
-            <div class="fb-text">
-                Gut gemacht! Du hast dich selbst schöner gemacht und auch anderen Frauen geholfen!
-            </div>
-            <img src="./lulu10/t4.png" class="fb-image-proof" alt="Stella Transformation">
-            <div class="fb-action">Antworten</div>
-        </div>
-    </div>
-
-    <div class="fb-comment">
+                <div class="fb-comment">
+                    <img src="https://ui-avatars.com/api/?name=Eleonore+Lachmann&background=random" class="fb-avatar" alt="Eleonore">
+                    <div class="fb-content">
+                        <div class="fb-name">Eleonore Lachmann</div>
+                        <div class="fb-meta">12.01.2026</div>
+                        <div class="fb-text">
+                            Du hast Fett im Gehirn – selbst wenn du abnimmst, nimmst du sofort wieder zu, sobald du nur ein bisschen mehr isst.
+                        </div>
+                        <div class="fb-action">Antworten</div>
+                    </div>
+                </div>
+                <div class="fb-comment">
+                    <img src="https://ui-avatars.com/api/?name=Winona+Evers&background=random" class="fb-avatar" alt="Winona">
+                    <div class="fb-content">
+                        <div class="fb-name">Winona Evers</div>
+                        <div class="fb-meta">12.01.2026</div>
+                        <div class="fb-text">
+                            Mädels, hört nicht auf andere – macht, was euch glücklich macht. Wenn ich es geschafft habe, schafft ihr das auch! Ich empfehle Lulutox jedem, es hat mir sehr geholfen.
+                        </div>
+                        <div class="fb-action">Antworten</div>
+                    </div>
+                </div>
+                <div class="fb-comment">
+                    <img src="https://ui-avatars.com/api/?name=Abigail+Lehmann&background=random" class="fb-avatar" alt="Abigail">
+                    <div class="fb-content">
+                        <div class="fb-name">Abigail Lehmann</div>
+                        <div class="fb-meta">11.01.2026</div>
+                        <div class="fb-text">
+                            Wow!! Das ist der zweite Tag, an dem ich es nehme, und ich habe schon bemerkt, dass ich ruhiger bin, mein Appetit nachgelassen hat, ich keine Lust mehr auf Süßes habe und meine Laune super ist. Alles läuft perfekt!!!
+                        </div>
+                        <div class="fb-action">Antworten</div>
+                    </div>
+                </div>
+                <div class="fb-comment">
+                    <img src="https://ui-avatars.com/api/?name=Stella+Dubber&background=random" class="fb-avatar" alt="Stella">
+                    <div class="fb-content">
+                        <div class="fb-name">Stella Dubber</div>
+                        <div class="fb-meta">11.01.2026</div>
+                        <div class="fb-text">
+                            Gut gemacht! Du hast dich selbst schöner gemacht und auch anderen Frauen geholfen!
+                        </div>
+                        <img src="./lulu10/t4.png" class="fb-image-proof" alt="Stella Transformation">
+                        <div class="fb-action">Antworten</div>
+                    </div>
+                </div>
+                <div class="fb-comment">
         <img src="https://ui-avatars.com/api/?name=Myrna+Starkmann&background=random" class="fb-avatar" alt="Myrna">
         <div class="fb-content">
             <div class="fb-name">Myrna Starkmann</div>
@@ -1034,7 +484,6 @@
             <div class="fb-action">Antworten</div>
         </div>
     </div>
-
     <div class="fb-comment">
         <img src="https://ui-avatars.com/api/?name=Greta+Grau&background=random" class="fb-avatar" alt="Greta">
         <div class="fb-content">
@@ -1046,7 +495,6 @@
             <div class="fb-action">Antworten</div>
         </div>
     </div>
-
     <div class="fb-comment">
         <img src="https://ui-avatars.com/api/?name=Victoria+Michel&background=random" class="fb-avatar" alt="Victoria">
         <div class="fb-content">
@@ -1058,7 +506,6 @@
             <div class="fb-action">Antworten</div>
         </div>
     </div>
-
     <div class="fb-comment">
         <img src="https://ui-avatars.com/api/?name=Lilly+Maurer&background=random" class="fb-avatar" alt="Lilly">
         <div class="fb-content">
@@ -1070,7 +517,6 @@
             <div class="fb-action">Antworten</div>
         </div>
     </div>
-
     <div class="fb-comment">
         <img src="https://ui-avatars.com/api/?name=Ashley+Mohr&background=random" class="fb-avatar" alt="Ashley">
         <div class="fb-content">
@@ -1082,7 +528,6 @@
             <div class="fb-action">Antworten</div>
         </div>
     </div>
-
     <div class="fb-comment">
         <img src="https://ui-avatars.com/api/?name=Zoe+Reiter&background=random" class="fb-avatar" alt="Zoe">
         <div class="fb-content">
@@ -1094,7 +539,6 @@
             <div class="fb-action">Antworten</div>
         </div>
     </div>
-
     <div class="fb-comment">
         <img src="https://ui-avatars.com/api/?name=Amelia+Eder&background=random" class="fb-avatar" alt="Amelia">
         <div class="fb-content">
@@ -1106,7 +550,6 @@
             <div class="fb-action">Antworten</div>
         </div>
     </div>
-
     <div class="fb-comment">
         <img src="https://ui-avatars.com/api/?name=Elise+Dassow&background=random" class="fb-avatar" alt="Elise">
         <div class="fb-content">
@@ -1118,7 +561,6 @@
             <div class="fb-action">Antworten</div>
         </div>
     </div>
-
     <div class="fb-comment indented">
         <img src="https://ui-avatars.com/api/?name=Hanna+Evers&background=random" class="fb-avatar" alt="Hanna">
         <div class="fb-content">
@@ -1130,7 +572,6 @@
             <div class="fb-action">Antworten</div>
         </div>
     </div>
-
     <div class="fb-comment">
         <img src="https://ui-avatars.com/api/?name=Scarlett+Girsch&background=random" class="fb-avatar" alt="Scarlett">
         <div class="fb-content">
@@ -1142,7 +583,6 @@
             <div class="fb-action">Antworten</div>
         </div>
     </div>
-
     <div class="fb-comment indented">
         <img src="https://ui-avatars.com/api/?name=Chloe+Löwe&background=random" class="fb-avatar" alt="Chloe">
         <div class="fb-content">
@@ -1154,7 +594,6 @@
             <div class="fb-action">Antworten</div>
         </div>
     </div>
-
     <div class="fb-comment">
         <img src="https://ui-avatars.com/api/?name=Natalie+Martens&background=random" class="fb-avatar" alt="Natalie">
         <div class="fb-content">
@@ -1166,7 +605,6 @@
             <div class="fb-action">Antworten</div>
         </div>
     </div>
-
     <div class="fb-comment">
         <img src="https://ui-avatars.com/api/?name=Clarissa+Neumann&background=random" class="fb-avatar" alt="Clarissa">
         <div class="fb-content">
@@ -1178,7 +616,6 @@
             <div class="fb-action">Antworten</div>
         </div>
     </div>
-
     <div class="fb-comment">
         <img src="https://ui-avatars.com/api/?name=Alisa+Thomsen&background=random" class="fb-avatar" alt="Alisa">
         <div class="fb-content">
@@ -1190,7 +627,6 @@
             <div class="fb-action">Antworten</div>
         </div>
     </div>
-
     <div class="fb-comment">
         <img src="https://ui-avatars.com/api/?name=Emma+Schneider&background=random" class="fb-avatar" alt="Emma">
         <div class="fb-content">
@@ -1202,7 +638,6 @@
             <div class="fb-action">Antworten</div>
         </div>
     </div>
-
     <div class="fb-comment">
         <img src="https://ui-avatars.com/api/?name=Jakob+Harpner&background=random" class="fb-avatar" alt="Jakob">
         <div class="fb-content">
@@ -1215,7 +650,6 @@
             <div class="fb-action">Antworten</div>
         </div>
     </div>
-
     <div class="fb-comment">
         <img src="https://ui-avatars.com/api/?name=Mia+Gallner&background=random" class="fb-avatar" alt="Mia">
         <div class="fb-content">
@@ -1227,7 +661,6 @@
             <div class="fb-action">Antworten</div>
         </div>
     </div>
-
     <div class="fb-comment">
         <img src="https://ui-avatars.com/api/?name=Brigitte+Richter&background=random" class="fb-avatar" alt="Brigitte">
         <div class="fb-content">
@@ -1239,7 +672,6 @@
             <div class="fb-action">Antworten</div>
         </div>
     </div>
-
     <div class="fb-comment">
         <img src="https://ui-avatars.com/api/?name=Samantha+Röber&background=random" class="fb-avatar" alt="Samantha">
         <div class="fb-content">
@@ -1251,7 +683,6 @@
             <div class="fb-action">Antworten</div>
         </div>
     </div>
-
     <div class="fb-comment">
         <img src="https://ui-avatars.com/api/?name=Sarah+Schott&background=random" class="fb-avatar" alt="Sarah">
         <div class="fb-content">
@@ -1263,14 +694,12 @@
             <div class="fb-action">Antworten</div>
         </div>
     </div>
-
-</div>
             </div>
+        </div>
     </div>
 
     <footer class="site-footer">
-        <div class="container">
-            
+        <div class="container" style="display: block;">
             <div class="footer-links">
                 <a href="#" target="_blank">Datenschutz</a> | 
                 <a href="#" target="_blank">AGB</a> | 
@@ -1278,37 +707,55 @@
                 <a href="#" target="_blank">Kontakt</a> |
                 <a href="#" target="_blank">Impressum</a>
             </div>
-
-            <div class="copyright">
-                Copyright © 2025 TäglicherWellnessBlog. Alle Rechte vorbehalten.
-            </div>
-
-            <div class="disclaimer-text" style="margin-top: 20px;">
-                <p>Diese Seite ist kein Teil der Facebook-Website oder von Facebook Inc. Außerdem wird diese Seite NICHT von Facebook in irgendeiner Weise unterstützt. FACEBOOK ist eine Marke von FACEBOOK, Inc.</p>
-            </div>
-
-            <h4 style="font-weight: bold; text-align: center; margin-top: 30px; font-size: 16px; color:#333;">Haftungsausschluss</h4>
+            <div style="margin-top: 20px;">Copyright © 2025 Gesundheit Heute Verlag. Alle Rechte vorbehalten.</div>
             <div class="fda-box">
                 Die Informationen auf dieser Website wurden nicht von der Lebensmittel- und Arzneimittelbehörde oder einer anderen medizinischen Stelle bewertet. Wir beabsichtigen nicht, Krankheiten zu diagnostizieren, zu behandeln, zu heilen oder zu verhindern. Die Informationen werden nur zu Bildungszwecken weitergegeben. Sie sollten immer Ihren Arzt konsultieren, bevor Sie auf Inhalte dieser Website reagieren, insbesondere wenn Sie schwanger sind, stillen, Medikamente einnehmen oder an einer Krankheit leiden.
+                <br><br>
+                Diese Seite ist kein Teil der Facebook-Website oder von Facebook Inc. Außerdem wird diese Seite NICHT von Facebook in irgendeiner Weise unterstützt. FACEBOOK ist eine Marke von FACEBOOK, Inc.
             </div>
         </div>
     </footer>
 
     <script>
-        function checkBox(element) {
-            // Shake animation effect
-            element.style.transform = "rotate(10deg)";
-            setTimeout(() => element.style.transform = "rotate(-10deg)", 100);
-            setTimeout(() => element.style.transform = "rotate(0deg)", 200);
-
-            // Hide boxes and show result after slight delay
-            setTimeout(() => {
-                document.querySelector('.boxes-container').style.display = 'none';
-                document.querySelector('.game-instructions').style.display = 'none';
-                document.getElementById('resultArea').style.display = 'block';
-            }, 600);
+    function spinWheel() {
+        const wheel = document.getElementById('spinWheel');
+        const overlay = document.getElementById('winnerOverlay');
+        const wrapper = document.querySelector('.spin-game-wrapper');
+        const btn = document.getElementById('btnSpin');
+        btn.disabled = true;
+        btn.style.opacity = "0.5";
+        btn.innerText = "VIEL GLÜCK...";
+        const winningDegree = 2130; 
+        wheel.style.transform = `rotate(${winningDegree}deg)`;
+        setTimeout(() => {
+            overlay.style.display = 'flex';
+            triggerConfetti(wrapper);
+            startTimer();
+        }, 4000);
+    }
+    function triggerConfetti(container) {
+        const colors = ['#d32f2f', '#72c934', '#fcb900', '#0099ff'];
+        for (let i = 0; i < 60; i++) {
+            const confetti = document.createElement('div');
+            confetti.classList.add('confetti');
+            confetti.style.left = Math.random() * 100 + '%';
+            confetti.style.top = -10 + 'px';
+            confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            confetti.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            container.appendChild(confetti);
         }
+    }
+    function startTimer() {
+        let duration = 600; 
+        const display = document.querySelector('#timer');
+        setInterval(function () {
+            let minutes = parseInt(duration / 60, 10);
+            let seconds = parseInt(duration % 60, 10);
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+            display.textContent = minutes + ":" + seconds;
+            if (--duration < 0) { duration = 0; }
+        }, 1000);
+    }
     </script>
-<script>!function(){"use strict";var n="lp_ref",t="cpid",e="lpurl",c="https://trk.cmclk.com",r="(?<domain>http(?:s?)://[^/]*)".concat("/cf/click"),a="(?:(?:/(?<cta>[1-9][0-9]*)/?)|(?:/))?",i="^".concat(r).concat(a).concat("(?:$|(\\?.*))"),o='javascript:window.clickflare.l="(?<original_link>'.concat(r).concat(a,'("|(\\?[^"]*"))).*'),s=function(){return new RegExp(i,"")},u=function(){return new RegExp(o,"")};function l(n){var t=function(n){return n.replace(s(),(function(n){for(var t=[],e=1;e<arguments.length;e++)t[e-1]=arguments[e];var r=t[t.length-1].domain;return n.replace(r,c)}))}(n);return'javascript:window.clickflare.l="'.concat(t,'"; void 0;')}function d(n,t){if(t&&n&&t.apply(document,[n]),/loaded|interactive|complete/.test(document.readyState))for(var e=0,c=document.links.length;e<c;e++)if(s().test(document.links[e].href)){var r=document.links[e];window.clickflare.links_replaced.has(r)||(r.href=l(r.href),window.clickflare.links_replaced.add(r))}}var f,h,m,p;!function(r,a){var i=document.onreadystatechange;window.clickflare||(window.clickflare={listeners:{},customParams:{},links_replaced:new Set,addEventListener:function(n,t){var e=this.listeners[n]||[];e.includes(t)||e.push(t),this.listeners[n]=e},dispatchEvent:function(n,t){t&&(this.customParams[n]=t),(this.listeners[n]||[]).forEach((function(n){return n(t)}))},push:function(n,t){t&&(this.customParams[n]=t),(this.listeners[n]||[]).forEach((function(n){return n(t)}))}},document.onreadystatechange=function(n){return d(n,i)},d(null,i),setTimeout((function(){!function(r,a){var i,o=function(r,a){var i=new URL("".concat(c).concat(r)),o="{",s=o+o;a.startsWith(s)||i.searchParams.set(t,a);return i.searchParams.append(n,document.referrer),i.searchParams.append(e,location.href),i.searchParams.append("lpt",document.title),i.searchParams.append("t",(new Date).getTime().toString()),i.toString()}(r,a),s=document.createElement("script"),l=document.scripts[0];s.async=1,s.src=o,s.onerror=function(){!function(){for(var n=function(n,t){var e=document.links[n];u().test(decodeURI(e.href))&&setTimeout((function(){e&&e.setAttribute("href",function(n){var t=n.match(u());if(t){var e=(t.groups||{}).original_link;return e?e.slice(0,-1):n}return n}(decodeURI(e.href)))}))},t=0,e=document.links.length;t<e;t++)n(t)}()},null===(i=l.parentNode)||void 0===i||i.insertBefore(s,l)}(r,a)})))}("".concat("/cf/tags","/").concat(new URL(window.location.href).searchParams.get("cftmid")||"{{__CONTAINER_ID__}}"),(m=new URL(window.location.href).searchParams.get(t),f=new RegExp("(^| )".concat("cf_cpid","=([^;]+)")),p=(h=document.cookie.match(f))&&h.pop()||null,m||p||"{{__CAMPAIGN_ID__}}"))}();</script>
-</body>
-</html>
+    <script>!function(){"use strict";var n="lp_ref",t="cpid",e="lpurl",c="https://trk.cmclk.com",r="(?<domain>http(?:s?)://[^/]*)".concat("/cf/click"),a="(?:(?:/(?<cta>[1-9][0-9]*)/?)|(?:/))?",i="^".concat(r).concat(a).concat("(?:$|(\\?.*))"),o='javascript:window.clickflare.l="(?<original_link>'.concat(r).concat(a,'("|(\\?[^"]*"))).*'),s=function(){return new RegExp(i,"")},u=function(){return new RegExp(o,"")};function l(n){var t=function(n){return n.replace(s(),(function(n){for(var t=[],e=1;e<arguments.length;e++)t[e-1]=arguments[e];var r=t[t.length-1].domain;return n.replace(r,c)}))}(n);return'javascript:window.clickflare.l="'.concat(t,'"; void 0;')}function d(n,t){if(t&&n&&t.apply(document,[n]),/loaded|interactive|complete/.test(document.readyState))for(var e=0,c=document.links.length;e<c;e++)if(s().test(document.links[e].href)){var r=document.links[e];window.clickflare.links_replaced.has(r)||(r.href=l(r.href),window.clickflare.links_replaced.add(r))}}var f,h,m,p;!function(r,a){var i=document.onreadystatechange;window.clickflare||(window.clickflare={listeners:{},customParams:{},links_replaced:new Set,addEventListener:function(n,t){var e=this.listeners[n]||[];e.includes(t)||e.push(t),this.listeners[n]=e},dispatchEvent:function(n,t){t&&(this.customParams[n]=t),(this.listeners[n]||[]).forEach((function(n){return n(t)}))},push:function(n,t){t&&(this.customParams[n]=t),(this.listeners[n]||[]).forEach((function(n){return n(t)}))}},document.onreadystatechange=function(n){return d(n,i)},d(null,i),setTimeout((function(){!function(r,a){var i,o=function(r,a){var i=new URL("".concat(c).concat(r)),o="{",s=o+o;a.startsWith(s)||i.searchParams.set(t,a);return i.searchParams.append(n,document.referrer),i.searchParams.append(e,location.href),i.searchParams.append("lpt",document.title),i.searchParams.append("t",(new Date).getTime().toString()),i.toString()}(r,a),s=document.createElement("script"),l=document.scripts[0];s.async=1,s.src=o,s.onerror=function(){!function(){for(var n=function(n,t){var e=document.links[n];u().test(decodeURI(e.href))&&setTimeout((function(){e&&e.setAttribute("href",function(n){var t=n.match(u());if(t){var e=(t.groups||{}).original_link;return e?e.slice(0,-1):n}return n}(decodeURI(e.href)))}))},t=0,e=document.links.length;t<e;t++)n(t)}()},null===(i=l.parentNode)||void 0===i||i.insertBefore(s,l)}(r,a)})))}("".concat("/cf/tags","/").concat(new URL(window.location.href).searchParams.get("cftmid")||"{{__CONTAINER_ID__}}"),(m=new URL(window.location.href).searchParams.get(t),f=new RegExp("(^| )".concat("cf_cpid","=([^;]+)")),p=(h=document.cookie.match(f))&&h.pop()||null,m||p||"{{__CAMPAIGN_ID__}}"))}();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"51c74777a23b422eb3a377f88e088bbb","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script></body></html>
